@@ -1,125 +1,6 @@
-// import React, { useState } from "react";
-// import { motion } from "framer-motion";
-// import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaPaperPlane, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-// import emailjs from "@emailjs/browser";
-// import Heading from "../components/Heading";
-
-// const Contact = () => {
-//     const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-//     const [isSubmitting, setIsSubmitting] = useState(false);
-
-//     const handleChange = (e) => {
-//         const { name, value } = e.target;
-//         setFormData((prev) => ({ ...prev, [name]: value }));
-//     };
-
-//     const handleSubmit = async (e) => {
-//         e.preventDefault();
-//         setIsSubmitting(true);
-
-//         try {
-//             await emailjs.send(
-//                 "your_service_id",
-//                 "your_template_id",
-//                 formData,
-//                 "your_public_key"
-//             );
-//             setFormData({ name: "", email: "", subject: "", message: "" });
-//         } catch (error) {
-//             console.error(error);
-//         } finally {
-//             setIsSubmitting(false);
-//         }
-//     };
-
-//     const contactInfo = [
-//         { icon: <FaMapMarkerAlt />, title: "Location", text: "Mumbai, India", link: "https://maps.google.com" },
-//         { icon: <FaEnvelope />, title: "Email", text: "contact@example.com", link: "mailto:contact@example.com" },
-//         { icon: <FaPhone />, title: "Phone", text: "+91 98765 43210", link: "tel:+919876543210" }
-//     ];
-
-//     const socialLinks = [
-//         { icon: <FaGithub />, url: "https://github.com/yourusername" },
-//         { icon: <FaLinkedin />, url: "https://linkedin.com/in/yourusername" },
-//         { icon: <FaTwitter />, url: "https://twitter.com/yourusername" }
-//     ];
-
-//     return (
-//         <section id="contact" className="py-20 bg-[#0a0f1f] text-white relative overflow-hidden">
-//             {/* Glow Background */}
-//             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-purple-500/10 blur-3xl"></div>
-
-//             <div className="max-w-7xl mx-auto px-6 relative z-10">
-//                 <Heading title="Get In Touch" subtitle="Contact Me" />
-
-//                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
-//                     {/* LEFT SIDE */}
-//                     <motion.div
-//                         initial={{ opacity: 0, x: -60 }}
-//                         whileInView={{ opacity: 1, x: 0 }}
-//                         transition={{ duration: 0.6 }}
-//                         className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-emerald-400/20 shadow-xl shadow-emerald-500/10"
-//                     >
-//                         <h3 className="text-2xl font-bold mb-4">Let’s Talk About Your Project</h3>
-//                         <p className="text-gray-300 mb-6">I’m always open to discussing new projects, ideas, or opportunities to collaborate.</p>
-
-//                         {/* Contact Info */}
-//                         <div className="space-y-6">
-//                             {contactInfo.map((item, i) => (
-//                                 <div key={i} className="flex items-center gap-4">
-//                                     <div className="text-emerald-400 text-2xl">{item.icon}</div>
-//                                     <div>
-//                                         <h4 className="font-semibold text-lg">{item.title}</h4>
-//                                         <a href={item.link} className="text-gray-300 hover:text-emerald-400 duration-200 text-sm">{item.text}</a>
-//                                     </div>
-//                                 </div>
-//                             ))}
-//                         </div>
-
-//                         {/* Social Links */}
-//                         <div className="flex gap-4 mt-8">
-//                             {socialLinks.map((s, i) => (
-//                                 <a key={i} href={s.url} target="_blank" className="text-2xl text-gray-300 hover:text-emerald-400 duration-200">
-//                                     {s.icon}
-//                                 </a>
-//                             ))}
-//                         </div>
-//                     </motion.div>
-
-//                     {/* RIGHT SIDE - FORM */}
-//                     <motion.div
-//                         initial={{ opacity: 0, x: 60 }}
-//                         whileInView={{ opacity: 1, x: 0 }}
-//                         transition={{ duration: 0.6 }}
-//                         className="backdrop-blur-xl bg-white/5 rounded-2xl p-8 border border-purple-400/20 shadow-xl shadow-purple-500/10"
-//                     >
-//                         <form onSubmit={handleSubmit} className="space-y-5">
-//                             <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required className="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-emerald-400 outline-none" />
-
-//                             <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required className="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-emerald-400 outline-none" />
-
-//                             <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} required className="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-emerald-400 outline-none" />
-
-//                             <textarea name="message" placeholder="Your Message" rows="5" value={formData.message} onChange={handleChange} required className="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-emerald-400 outline-none"></textarea>
-
-//                             <button type="submit" disabled={isSubmitting} className="w-full py-3 text-lg font-semibold rounded-xl bg-gradient-to-r from-emerald-500 to-purple-500 hover:opacity-90 duration-200 flex items-center justify-center gap-2">
-//                                 {isSubmitting ? "Sending..." : <>Send Message <FaPaperPlane /></>}
-//                             </button>
-//                         </form>
-//                     </motion.div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default Contact;
-
-
-
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaPaperPlane, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaPaperPlane, FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -169,15 +50,16 @@ export default function Contact() {
     };
 
     const contactInfo = [
-        { icon: <FaMapMarkerAlt />, title: "Location", text: "Mumbai, India", link: "https://maps.google.com" },
-        { icon: <FaEnvelope />, title: "Email", text: "contact@example.com", link: "mailto:contact@example.com" },
-        { icon: <FaPhone />, title: "Phone", text: "+91 98765 43210", link: "tel:+919876543210" }
+        { icon: <FaMapMarkerAlt />, title: "Location", text: "Vaishali, Ghaziabad", link: "https://maps.google.com" },
+        { icon: <FaEnvelope />, title: "Email", text: "rjsoni107@gmail.com", link: "mailto:rjsoni107@gmail.com" },
+        { icon: <FaPhone />, title: "Phone", text: "+91 9524000107", link: "tel:+919524000107" }
     ];
 
     const socialLinks = [
-        { icon: <FaGithub />, url: "https://github.com/yourusername" },
-        { icon: <FaLinkedin />, url: "https://linkedin.com/in/yourusername" },
-        { icon: <FaTwitter />, url: "https://twitter.com/yourusername" }
+        { icon: <FaGithub />, url: "https://github.com/rjsoni107", color: "#78a5f4" },
+        { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246", color: "#78a5f4" },
+        { icon: <FaInstagram />, url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm", color: "#78a5f4" },
+        { icon: <FaFacebook />, url: "https://www.facebook.com/share/1BVBcybbH7/", color: "#78a5f4" }
     ];
 
     // helper to render floating particles
@@ -187,16 +69,16 @@ export default function Contact() {
         <section id="contact" className="relative overflow-hidden py-24 bg-[#040617] dark:bg-gradient-to-b dark:from-gray-900 dark:to-black text-white">
             {/* Global styles for keyframes (keeps inside component for single-file portability) */}
             <style>{`
-        @keyframes floatY { 0% { transform: translateY(0) } 50% { transform: translateY(-20px) } 100% { transform: translateY(0) } }
-        @keyframes floatX { 0% { transform: translateX(0) } 50% { transform: translateX(18px) } 100% { transform: translateX(0) } }
-        @keyframes neonPulse { 0% { box-shadow: 0 0 8px rgba(99,102,241,0.12), 0 0 18px rgba(99,102,241,0.06) } 50% { box-shadow: 0 0 18px rgba(99,102,241,0.18), 0 0 36px rgba(124,58,237,0.12) } 100% { box-shadow: 0 0 8px rgba(99,102,241,0.12), 0 0 18px rgba(99,102,241,0.06) } }
-        @keyframes pulseBorder { 0% { box-shadow: 0 0 0 0 rgba(99,102,241,0.10) } 70% { box-shadow: 0 0 0 12px rgba(99,102,241,0) } 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0) } }
-        .liquid-btn .liquid { transition: all .35s ease; }
-      `}</style>
+                @keyframes floatY { 0% { transform: translateY(0) } 50% { transform: translateY(-20px) } 100% { transform: translateY(0) } }
+                @keyframes floatX { 0% { transform: translateX(0) } 50% { transform: translateX(18px) } 100% { transform: translateX(0) } }
+                @keyframes neonPulse { 0% { box-shadow: 0 0 8px rgba(99,102,241,0.12), 0 0 18px rgba(99,102,241,0.06) } 50% { box-shadow: 0 0 18px rgba(99,102,241,0.18), 0 0 36px rgba(124,58,237,0.12) } 100% { box-shadow: 0 0 8px rgba(99,102,241,0.12), 0 0 18px rgba(99,102,241,0.06) } }
+                @keyframes pulseBorder { 0% { box-shadow: 0 0 0 0 rgba(99,102,241,0.10) } 70% { box-shadow: 0 0 0 12px rgba(99,102,241,0) } 100% { box-shadow: 0 0 0 0 rgba(99,102,241,0) } }
+                .liquid-btn .liquid { transition: all .35s ease; }
+            `}</style>
 
             {/* Background glows */}
-            <div className="absolute -left-32 top-8 w-96 h-96 rounded-full bg-gradient-to-br from-emerald-400/30 to-blue-500/20 filter blur-3xl opacity-80 pointer-events-none"></div>
-            <div className="absolute -right-32 bottom-8 w-96 h-96 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-400/20 filter blur-3xl opacity-80 pointer-events-none"></div>
+            <div className="absolute -left-32 top-8 w-96 h-96 rounded-full bg-gradient-to-br from-emerald-400/30 to-blue-500/20 filter blur-2xl opacity-90 pointer-events-none"></div>
+            <div className="absolute -right-32 bottom-8 w-96 h-96 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-400/20 filter blur-2xl opacity-90 pointer-events-none"></div>
 
             {/* Floating particles */}
             {particles.map((p, i) => {
@@ -245,20 +127,20 @@ export default function Contact() {
                                     <a key={idx} href={item.link} target="_blank" rel="noreferrer" className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200">
                                         <div className="text-2xl p-2 rounded-lg bg-white/5 text-emerald-300 flex items-center justify-center shadow-[0_6px_22px_rgba(14,165,233,0.03)]">{item.icon}</div>
                                         <div>
-                                            <h4 className="font-semibold">{item.title}</h4>
+                                            <h4 className="font-semibold text-white">{item.title}</h4>
                                             <p className="text-gray-300 text-sm">{item.text}</p>
                                         </div>
                                     </a>
                                 ))}
                             </div>
 
-                            <div className="flex items-center gap-3 mt-8">
+                            {/* <div className="flex items-center gap-3 mt-8">
                                 {socialLinks.map((s, i) => (
-                                    <a key={i} href={s.url} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full flex items-center justify-center bg-white/6 border border-white/8 text-gray-200 hover:bg-white/8 transition-shadow duration-200">
+                                    <a key={i} href={s.url} target="_blank" rel="noreferrer" className={`w-10 h-10 rounded-full flex items-center justify-center bg-white/6 border border-white/8 text-gray-200 hover:bg-white/8 transition-shadow duration-200`}>
                                         {s.icon}
                                     </a>
                                 ))}
-                            </div>
+                            </div> */}
 
                             {/* subtle neon pulse circle */}
                             <div className="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/20 filter blur-2xl opacity-80 animate-[pulseBorder_2.8s_linear_infinite] pointer-events-none"></div>
@@ -288,7 +170,7 @@ export default function Contact() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="relative overflow-hidden w-full py-3 rounded-xl text-lg font-semibold liquid-btn bg-gradient-to-r from-emerald-400 to-purple-400 text-black flex items-center justify-center gap-3"
+                                    className="relative overflow-hidden w-full py-3 rounded-xl text-lg font-semibold liquid-btn bg-gradient-to-r from-emerald-800 to-blue-800 text-white flex items-center justify-center gap-3"
                                 >
                                     {/* liquid layer - moves on hover */}
                                     <span className="liquid absolute inset-0 bg-white/10 transform -translate-x-6 -translate-y-6 rotate-12" style={{ mixBlendMode: 'overlay' }} />
@@ -296,7 +178,7 @@ export default function Contact() {
                                 </button>
 
                                 {/* neon border pulse */}
-                                <div className="mt-3 h-0.5 w-full rounded-full bg-gradient-to-r from-emerald-400 to-purple-400 opacity-60 animate-[neonPulse_3s_ease-in-out_infinite]"></div>
+                                <div className="mt-3 h-0.5 w-full rounded-full bg-gradient-to-r from-emerald-800 to-blue-800 opacity-60 animate-[neonPulse_3s_ease-in-out_infinite]"></div>
                             </div>
                         </form>
                     </motion.div>

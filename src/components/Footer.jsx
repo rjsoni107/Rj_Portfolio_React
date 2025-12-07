@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
 
@@ -11,6 +11,13 @@ const Footer = () => {
             window.scrollTo({ top: el.offsetTop - 65, behavior: 'smooth' });
         }
     };
+
+    const socialLinks = [
+        { icon: <FaGithub />, url: "https://github.com/rjsoni107", color: "#78a5f4" },
+        { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246", color: "#78a5f4" },
+        { icon: <FaInstagram />, url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm", color: "#78a5f4" },
+        { icon: <FaFacebook />, url: "https://www.facebook.com/share/1BVBcybbH7/", color: "#78a5f4" }
+    ];
 
     return (
         <footer className="relative overflow-hidden pt-20 pb-10 bg-black backdrop-blur-xl border-t border-white/10 footer-wrapper">
@@ -48,7 +55,7 @@ const Footer = () => {
 
                         {/* Social Icons - Neon Orbit */}
                         <div className="flex gap-4 mt-4">
-                            {[{ icon: <FaGithub />, url: '#' }, { icon: <FaLinkedin />, url: '#' }, { icon: <FaTwitter />, url: '#' }, { icon: <FaEnvelope />, url: '#' }].map((item, i) => (
+                            {socialLinks.map((item, i) => (
                                 <a
                                     key={i}
                                     href={item.url}

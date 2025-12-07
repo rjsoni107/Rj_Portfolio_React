@@ -1,100 +1,9 @@
-// import React from "react";
-// import Heading from "../components/Heading";
-// import { FaPhoneAlt, FaDownload } from "react-icons/fa";
-// import aboutImage from "../assets/images/about.webp";
-// import { resumeUrl } from "../assets/js/global";
-
-// const About = () => {
-//     return (
-//         <section
-//             id="about"
-//             className="bg-[#f9fbff] dark:bg-[#0c111c] py-20 text-gray-800 dark:text-gray-300 relative overflow-hidden"
-//         >
-//             <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12">
-//                 {/* === Left Image === */}
-//                 <div
-//                     data-aos="zoom-in"
-//                     data-aos-duration="1000"
-//                     data-aos-delay="50"
-//                     className="flex-1 flex justify-center lg:justify-start"
-//                 >
-//                     <img
-//                         src={aboutImage}
-//                         alt="About Appointer"
-//                         className="rounded-2xl max-w-sm sm:max-w-md lg:max-w-lg object-cover"
-//                     />
-//                 </div>
-
-//                 {/* === Right Content === */}
-//                 <div
-//                     data-aos="fade-left"
-//                     data-aos-duration="1000"
-//                     data-aos-delay="50"
-//                     className="flex-1 space-y-6 text-center lg:text-left"
-//                 >
-//                     <h2 className="text-3xl sm:text-4xl font-bold dark:text-white">
-//                         About <span className="text-blue-600 dark:text-blue-400">Myself</span>
-//                     </h2>
-//                     {/* <Heading title="About my self" subtitle=" Who am I" /> */}
-
-//                     <p className="text-gray-600 dark:text-gray-200 text-md leading-relaxed first-letter-big">
-//                         Passionate Front-End Developer with 3.5 years of experience in a Payment Gateway company, specialising in Web Development and
-//                         optimising landing pages. Proficient in ReactJS, HTML, CSS, JavaScript and jQuery.
-//                         Throughout my career as a front-end developer, I have prioritised
-//                         the creation of scalable and well-documented code. I enjoy working
-//                         collaboratively, but can also run projects on my own.
-//                     </p>
-
-//                     <p className="text-gray-600 dark:text-gray-200 text-md leading-relaxed">
-//                         In my role at Letzpay Solution Private Limited, I've contributed significantly to web development projects,
-//                         collaborating with design and back-end teams to create reusable
-//                         code and ensure smooth functionality. My skills also extend to API
-//                         integration, Bootstrap and responsive web design.
-//                     </p>
-
-//                     {/* === CTA Button === */}
-//                     <div className="flex flex-wrap gap-4 pt-4">
-
-//                         <a
-//                             href="#contact"
-//                             className="inline-flex items-center gap-2 bg-blue-600 dark:bg-blue-500 text-white px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg hover:text-white hover:bg-blue-300 dark:hover:bg-blue-600 transition-all duration-300"
-//                         >
-//                             <FaPhoneAlt className="text-lg" />
-//                             Contact Me
-//                         </a>
-//                         <a
-//                             href={resumeUrl}
-//                             download
-//                             target="_blank"
-//                             className="inline-flex items-center gap-2 bg-emerald-500 dark:bg-emerald-500 text-white px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg hover:text-white hover:bg-emerald-300 dark:hover:bg-emerald-600 transition-all duration-300"
-//                         >
-//                             <FaDownload className="text-lg" />
-//                             Download CV
-//                         </a>
-//                     </div>
-//                 </div>
-//             </div>
-//         </section>
-
-//     );
-// };
-
-// export default About;
-
-
-import React, { useEffect } from 'react';
-import Heading from '../components/Heading';
+import React from 'react';
 import { FaPhoneAlt, FaDownload } from 'react-icons/fa';
 import aboutImage from '../assets/images/about.webp';
 import { resumeUrl } from '../assets/js/global';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const About = () => {
-    useEffect(() => {
-        AOS.init({ duration: 800, once: true, offset: 120 });
-    }, []);
-
     return (
         <section
             id="about"
@@ -122,7 +31,7 @@ const About = () => {
                 <div
                     data-aos="fade-left"
                     data-aos-duration="1000"
-                    className="relative flex-1 bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 space-y-6 shadow-xl hover:shadow-2xl transition-all duration-300"
+                    className="relative flex-1 bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
                 >
                     <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400">
                         About <span className="text-white">Myself</span>
@@ -135,36 +44,76 @@ const About = () => {
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-wrap gap-4 pt-4">
+
+                    <div className="flex flex-wrap gap-4 pt-4 justify-center">
+                        {/* Contact Me */}
                         <a
                             href="#contact"
-                            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400 px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+                            className="
+                                relative inline-flex items-center gap-2
+                                rounded-full border-0
+                                px-6 py-3 md:px-12
+                                font-semibold text-base
+                                text-white
+                                bg-[#005693]
+                                shadow-md
+                                outline-none
+                                select-none
+                                transition-all duration-300
+                                hover:scale-110 hover:shadow-xl
+                                hover:text-white
+                                before:content-['']
+                                before:absolute before:top-0 before:left-[4%]
+                                before:h-1/2 before:w-[92%]
+                                before:rounded-full
+                                before:bg-gradient-to-b
+                                before:from-white/80 before:to-white/0
+                                before:opacity-50
+                                before:transition-all before:duration-300
+                                "
                         >
-                            <FaPhoneAlt className="text-lg" /> Contact Me
+                            <FaPhoneAlt className="text-lg" />
+                            Contact Me
                         </a>
+
+                        {/* Download CV */}
                         <a
                             href={resumeUrl}
                             download
                             target="_blank"
-                            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-400 px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+                            className="
+                                relative inline-flex items-center gap-2
+                                rounded-full border-0
+                                px-6 py-3 md:px-12
+                                font-semibold text-base
+                                text-white
+                                bg-emerald-700
+                                shadow-md
+                                outline-none
+                                select-none
+                                transition-all duration-300
+                                hover:scale-110 hover:shadow-xl
+                                hover:text-white
+                                before:content-['']
+                                before:absolute before:top-0 before:left-[4%]
+                                before:h-1/2 before:w-[92%]
+                                before:rounded-full
+                                before:bg-gradient-to-b
+                                before:from-white/80 before:to-white/0
+                                before:opacity-50
+                                before:transition-all before:duration-300
+                                "
                         >
-                            <FaDownload className="text-lg" /> Download CV
+                            <FaDownload className="text-lg" />
+                            Download CV
                         </a>
                     </div>
+
 
                     {/* Neon glow border pulse */}
                     <div className="absolute inset-0 rounded-3xl border border-emerald-400/20 pointer-events-none animate-pulse-slow"></div>
                 </div>
             </div>
-
-            {/* Custom animation for pulse */}
-            <style>{`
-        @keyframes pulse-slow {
-          0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); }
-          50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.35); }
-        }
-        .animate-pulse-slow { animation: pulse-slow 2.5s infinite ease-in-out; }
-      `}</style>
         </section>
     );
 };

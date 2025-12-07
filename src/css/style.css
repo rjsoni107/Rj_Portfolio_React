@@ -66,3 +66,19 @@
 .float-soft {
     animation: floatSoft 6s ease-in-out infinite;
 } */
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.35);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 2.5s infinite ease-in-out;
+}

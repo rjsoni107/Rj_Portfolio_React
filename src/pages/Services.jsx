@@ -88,12 +88,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const services = [
-    { icon: <FaCode className="text-4xl text-yellow-400" />, title: 'Web Development', desc: 'Building responsive and interactive websites using modern web technologies.' },
+    { icon: <FaCode className="text-4xl text-yellow-400" />, title: 'Web Designing & Development', desc: 'Building responsive and interactive websites using modern web technologies.' },
     { icon: <FaMobile className="text-4xl text-red-400" />, title: 'Mobile Development', desc: 'Creating cross-platform mobile applications with React Native.' },
-    { icon: <FaSearch className="text-4xl text-blue-400" />, title: 'SEO Optimization', desc: 'Improving website visibility and ranking on search engines.' },
+    { icon: <FaSearch className="text-4xl text-blue-200" />, title: 'SEO Optimization', desc: 'Improving website visibility and ranking on search engines.' },
     { icon: <FaPalette className="text-4xl text-green-400" />, title: 'UI/UX Design', desc: 'Designing beautiful and intuitive user interfaces and experiences.' },
-    { icon: <FaServer className="text-4xl text-pink-400" />, title: 'Backend Development', desc: 'Building robust and scalable server-side applications.' },
-    { icon: <FaChartLine className="text-4xl text-purple-400" />, title: 'Digital Marketing', desc: 'Strategies to grow your online presence and reach your target audience.' },
+    { icon: <FaServer className="text-4xl text-pink-400" />, title: 'Freelancing', desc: 'Freelancing services for clients.' },
+    { icon: <FaChartLine className="text-4xl text-cyan-400" />, title: 'API Integration', desc: 'Integrating APIs to enhance functionality and data access.' },
 ];
 
 const Services = () => {
@@ -106,8 +106,11 @@ const Services = () => {
             <div className="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-gradient-to-br from-purple-400/20 to-pink-400/10 blur-3xl opacity-80 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-6">
-                <div data-aos="zoom-in-up" className="mb-12">
-                    <Heading title="My Services" subtitle="What I Offer" headingClass="text-white" />
+                <div data-aos="zoom-in-up" className="text-center mb-14">
+                    <h2 className="text-4xl font-extrabold tracking-wide bg-gradient-to-r from-[#43cf2d] to-[#1d7ee4] bg-clip-text text-transparent">
+                        My Services
+                    </h2>
+                    <p className="text-gray-400 text-lg mt-2">What I Offer</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -134,8 +137,8 @@ const Services = () => {
 
             <style>{`
                 @keyframes pulse-slow {
-                    0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); }
-                    50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.35); }
+                    0%, 100% { box-shadow: 0 0 10px rgba(16, 185, 129, 0.2); }
+                    50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.35); }
                 }
                 .animate-pulse-slow { animation: pulse-slow 2.5s infinite ease-in-out; }
             `}</style>
