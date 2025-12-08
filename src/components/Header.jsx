@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import headerLogo from "../assets/images/logo.webp";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -42,14 +43,16 @@ const Header = () => {
     const navLinks = ['home', 'about', 'services', 'experience', 'projects', 'contact'];
 
     return (
-        <header className={`fixed top-0 w-full z-50 transition-all duration-300 shadow-lg ${isScrolled ? 'bg-black/90 shadow-lg py-4' : 'bg-black/50 backdrop-blur-md py-6'}`}>
+        <header className={`fixed top-0 w-full z-50 transition-all duration-300 shadow-lg ${isScrolled ? 'bg-black/90 shadow-lg py-2' : 'bg-black/50 backdrop-blur-md py-3'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <a href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }} className="text-2xl font-bold text-white z-50 relative">Rj Portfolio</a>
+                <a href="#home" onClick={(e) => { e.preventDefault(); handleNavClick('home'); }} className="text-2xl font-bold text-white z-50 relative">
+                    <img src={headerLogo} alt="logo" srcSet="" className="w-40 h-14" />
+                </a>
 
                 {/* Desktop */}
                 <nav className="hidden lg:flex space-x-8 z-50">
                     {navLinks.map((link) => (
-                        <a key={link} href={`#${link}`} onClick={(e) => { e.preventDefault(); handleNavClick(link); }} className={`font-medium transition-colors ${activeSection === link ? 'text-emerald-400' : 'text-white hover:text-emerald-400'}`}>
+                        <a key={link} href={`#${link}`} onClick={(e) => { e.preventDefault(); handleNavClick(link); }} className={`font-medium transition-colors ${activeSection === link ? 'text-emerald-600 border-b-2 border-emerald-600' : 'text-white hover:text-emerald-600'}`}>
                             {link.charAt(0).toUpperCase() + link.slice(1)}
                         </a>
                     ))}

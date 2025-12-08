@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaPhoneAlt, FaDownload } from 'react-icons/fa';
-import aboutImage from '../assets/images/about.webp';
+// import aboutImage from '../assets/images/about.webp';
+import aboutImage from '../assets/images/about-pic-old.png';
 import { resumeUrl } from '../assets/js/global';
 
 const About = () => {
@@ -18,7 +19,7 @@ const About = () => {
                 <div
                     data-aos="zoom-in"
                     data-aos-duration="1000"
-                    className="flex-1 flex justify-center lg:justify-start perspective-1000 hover:rotate-y-0 hover:rotate-x-0 transform-style-preserve"
+                    className="flex-1 flex justify-center perspective-1000 hover:rotate-y-0 hover:rotate-x-0 transform-style-preserve"
                 >
                     <img
                         src={aboutImage}

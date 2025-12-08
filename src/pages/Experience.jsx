@@ -76,7 +76,7 @@ export default function Experience() {
                 <div className="flex justify-center gap-6 mb-12" data-aos="zoom-in">
                     {[{ key: "work", icon: <FaBriefcase />, label: "Work" },
                     { key: "education", icon: <FaGraduationCap />, label: "Education" },
-                    { key: "projects", icon: <FaCode />, label: "Projects" }].map((tab) => (
+                    { key: "projects", icon: <FaCode />, label: "Key Projects" }].map((tab) => (
                         <button
                             key={tab.key}
                             onClick={() => setActiveTab(tab.key)}
@@ -109,7 +109,7 @@ export default function Experience() {
                                     <FaBriefcase />
                                     <span className="text-sm text-gray-400">{exp.period}</span>
                                 </div>
-                                <h3 className="text-xl font-semibold">{exp.title}</h3>
+                                <h3 className="text-xl font-semibold text-blue-600">{exp.title}</h3>
                                 <h4 className="text-gray-400 mb-3">{exp.company}</h4>
                                 <p className="text-gray-300">{exp.description}</p>
 
@@ -146,7 +146,7 @@ export default function Experience() {
                                     <FaGraduationCap />
                                     <span className="text-sm text-gray-400">{edu.period}</span>
                                 </div>
-                                <h3 className="text-xl font-semibold">{edu.degree}</h3>
+                                <h3 className="text-xl font-semibold text-emerald-600">{edu.degree}</h3>
                                 <h4 className="text-gray-400 mb-3">{edu.institution}</h4>
                                 <p className="text-gray-300">{edu.description}</p>
                             </div>
@@ -195,7 +195,7 @@ export default function Experience() {
                                 </div>
 
                                 <div className="p-5">
-                                    <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                                    <h3 className="text-xl font-semibold mb-1 text-blue-600">{project.title}</h3>
                                     <p className="text-gray-300 text-sm">{project.description}</p>
 
                                     <div className="flex flex-wrap gap-2 mt-4">

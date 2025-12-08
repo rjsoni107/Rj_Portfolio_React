@@ -122,13 +122,13 @@ export default function Contact() {
                             <h3 className="text-2xl font-semibold mb-3 text-white">Let’s Talk About Your Project</h3>
                             <p className="text-gray-300 mb-6">I’m open to new projects, collaborations, or just a friendly hello. Drop a message and I’ll get back within 24-48 hours.</p>
 
-                            <div className="space-y-5">
+                            <div className="space-y-3">
                                 {contactInfo.map((item, idx) => (
                                     <a key={idx} href={item.link} target="_blank" rel="noreferrer" className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200">
                                         <div className="text-2xl p-2 rounded-lg bg-white/5 text-emerald-300 flex items-center justify-center shadow-[0_6px_22px_rgba(14,165,233,0.03)]">{item.icon}</div>
                                         <div>
-                                            <h4 className="font-semibold text-white">{item.title}</h4>
-                                            <p className="text-gray-300 text-sm">{item.text}</p>
+                                            <h5 className="font-semibold text-white mb-2">{item.title}</h5>
+                                            <p className="text-gray-300 text-base ">{item.text}</p>
                                         </div>
                                     </a>
                                 ))}

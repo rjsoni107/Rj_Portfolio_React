@@ -74,7 +74,7 @@ function App() {
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={scrollToTop}
-                        className="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl flex items-center justify-center z-40 hover:shadow-2xl transition-all duration-300 group"
+                        className="fixed bottom-8 right-8 w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl flex items-center justify-center z-40 hover:shadow-2xl transition-all duration-300 group"
                         aria-label="Scroll to top"
                     >
                         <FaArrowUp className="text-xl group-hover:animate-bounce" />

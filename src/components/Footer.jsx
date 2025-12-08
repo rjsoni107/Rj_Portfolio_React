@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp, FaFacebook, FaInstagram } from 'react-icons/fa';
+import headerLogo from "../assets/images/logo.webp";
 
 const Footer = () => {
 
@@ -20,7 +21,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="relative overflow-hidden pt-20 pb-10 bg-black backdrop-blur-xl border-t border-white/10 footer-wrapper">
+        <footer className="relative overflow-hidden pt-20 pb-8 bg-black backdrop-blur-xl border-t border-white/10 footer-wrapper">
 
             {/* 🔥 Floating Neon Particles */}
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -39,7 +40,7 @@ const Footer = () => {
             </div>
 
             {/* 🌊 Neon Wave Separator */}
-            <div className="absolute -top-1 left-0 w-full h-10 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-purple-500 opacity-70 blur-xl"></div>
+            <div className="absolute -top-1 left-0 w-full h-6 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-purple-500 opacity-70 blur-xl"></div>
 
             {/* 🟦 Gradient Animated Border */}
             <div className="absolute inset-0 border border-transparent rounded-xl animate-borderGlow"></div>
@@ -50,7 +51,8 @@ const Footer = () => {
                 <div data-aos="fade-up" className="grid md:grid-cols-3 gap-10 text-white/80">
                     {/* About */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-white mb-3">Raj Soni</h3>
+                        {/* <h3 className="text-2xl font-semibold text-white mb-3">Raj Soni</h3> */}
+                        <img src={headerLogo} alt="logo" srcSet="" className="w-40 h-14" />
                         <p className="mb-4 text-white/70">A passionate web developer dedicated to creating beautiful, responsive and polished web experiences.</p>
 
                         {/* Social Icons - Neon Orbit */}
@@ -94,7 +96,7 @@ const Footer = () => {
                                 placeholder="Your email address"
                                 required
                             />
-                            <button className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg shadow-lg hover:opacity-90 transition">
+                            <button className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-lg hover:opacity-90 transition">
                                 Subscribe
                             </button>
                         </form>

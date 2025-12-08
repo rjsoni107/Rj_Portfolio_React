@@ -33,8 +33,8 @@ const Home = () => {
                     <span className="inline-block bg-emerald-600/90 px-6 py-1.5 sm:px-8 sm:py-2 rounded-full animate-pulse">HI!</span>
 
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                        <span className="text-blue-500 neon-text">I am </span>
-                        <span className="text-emerald-500 neon-text">Kuldeep Soni</span>
+                        <span className="text-blue-800 neon-text">I am </span>
+                        <span className="text-emerald-800 neon-text">Kuldeep</span>
                     </h1>
 
                     <h2 className="text-lg sm:text-xl md:text-2xl text-gray-800  font-medium  min-h-[40px] sm:min-h-[48px]  flex items-center  justify-center lg:justify-start">
