@@ -12,7 +12,7 @@ const Home = () => {
         <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0">
-                <img src={headerBg} alt="Background" className="w-full h-full lg:h-auto object-cover" loading="lazy" />
+                <img src={headerBg} alt="Background" className="w-full h-full lg:h-auto object-cover" fetchPriority="high" />
                 <div className="absolute inset-0 bg-black/40" />
             </div>
 
@@ -24,7 +24,13 @@ const Home = () => {
                 {/* Left: Image */}
                 <div className="flex-1 flex justify-center lg:justify-start">
                     <div className="relative group perspective-1000">
-                        <img src={heroImg} alt="Raj Soni" className="w-72 xs:w-60 sm:w-72 md:w-80 h-auto rounded-3xl transition-transform duration-500 transform-gpu group-hover:rotate-y-3 group-hover:scale-105" loading="lazy" />
+                        <img
+                            src={heroImg}
+                            alt="Raj Soni"
+                            className="w-72 xs:w-60 sm:w-72 md:w-80 h-auto rounded-3xl transition-transform duration-500 transform-gpu group-hover:rotate-y-3 group-hover:scale-105"
+                            loading="eager"
+                            fetchPriority="high"
+                        />
                     </div>
                 </div>
 

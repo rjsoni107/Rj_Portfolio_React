@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPhoneAlt, FaDownload } from 'react-icons/fa';
 // import aboutImage from '../assets/images/about.webp';
-import aboutImage from '../assets/images/about-pic-old.png';
+import aboutImage from '../assets/images/about.png';
 import { resumeUrl } from '../assets/js/global';
 
 const About = () => {
@@ -24,7 +24,7 @@ const About = () => {
                     <img
                         src={aboutImage}
                         alt="About"
-                        className="rounded-2xl max-w-sm sm:max-w-md lg:max-w-lg object-cover transform transition-transform duration-300 hover:scale-105"
+                        className="rounded-2xl max-w-sm sm:max-w-md lg:max-w-lg object-cover transform transition-transform duration-300 hover:scale-105 h-[434px]"
                     />
                 </div>
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowUp } from 'react-icons/fa';
 import AOS from "aos";
@@ -8,12 +8,13 @@ import "aos/dist/aos.css";
 import Footer from './components/Footer';
 
 // Import sections
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Services = React.lazy(() => import('./pages/Services'));
+const Experience = React.lazy(() => import('./pages/Experience'));
+const Projects = React.lazy(() => import('./pages/Projects'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+
 
 import './assets/js/global.js';
 
