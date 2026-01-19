@@ -52,7 +52,7 @@ const Header = () => {
                 {/* Desktop */}
                 <nav className="hidden lg:flex space-x-8 z-50">
                     {navLinks.map((link) => (
-                        <a key={link} href={`#${link}`} onClick={(e) => { e.preventDefault(); handleNavClick(link); }} className={`font-medium transition-colors ${activeSection === link ? 'text-emerald-600 border-b-2 border-emerald-600' : 'text-white hover:text-emerald-600'}`}>
+                        <a key={link} href={`#${link}`} onClick={(e) => { e.preventDefault(); handleNavClick(link); }} className={`font-medium transition-colors ${activeSection === link ? 'text-emerald-500 border-b-2 border-emerald-500' : 'text-white hover:text-emerald-500'}`}>
                             {link.charAt(0).toUpperCase() + link.slice(1)}
                         </a>
                     ))}

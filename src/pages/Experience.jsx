@@ -39,31 +39,31 @@ export default function Experience() {
     const education = [
         {
             id: 1,
-            degree: "Bachelor of Arts (B.A.)",
-            institution: "Govt College Barwala, Kurukshetra University",
-            period: "2016 - 2019",
-            description: "Completed Bachelor of Arts with graduation from Kurukshetra University.",
-        },
-        {
-            id: 2,
-            degree: "12th (H.B.S.E Board)",
-            institution: "J.D. Sr. Sec. School, Hisar",
-            period: "2015 - 2016",
-            description: "Completed 12th standard from Haryana Board of School Education.",
-        },
-        {
-            id: 3,
             degree: "Advance Certificate in Computer Application (ACCA)",
             institution: "AFCA Computer Center, Hisar",
             period: "June 2019 - December 2019",
             description: "Gained strong foundation in computer programming, database management, and software applications.",
         },
         {
-            id: 4,
+            id: 2,
+            degree: "Bachelor of Arts (B.A.)",
+            institution: "Govt College Barwala, Kurukshetra University",
+            period: "2016 - 2019",
+            description: "Completed Bachelor of Arts with graduation from Kurukshetra University.",
+        },
+        {
+            id: 3,
             degree: "Computer Diploma (Basic)",
             institution: "Govt College Barwala, Hisar",
             period: "July 2016 - July 2017",
             description: "Learned basic computer concepts, operating systems, and office productivity tools.",
+        },
+        {
+            id: 4,
+            degree: "12th (H.B.S.E Board)",
+            institution: "J.D. Sr. Sec. School, Hisar",
+            period: "2015 - 2016",
+            description: "Completed 12th standard from Haryana Board of School Education.",
         },
     ];
 
@@ -166,7 +166,7 @@ export default function Experience() {
                                     <FaBriefcase />
                                     <span className="text-sm text-gray-400">{exp.period}</span>
                                 </div>
-                                <h3 className="text-xl font-semibold text-emerald-600">{exp.title}</h3>
+                                <h3 className="text-xl font-semibold text-emerald-500">{exp.title}</h3>
                                 <h4 className="text-gray-400 mb-3">{exp.company}</h4>
                                 <p className="text-gray-300">{exp.description}</p>
 
@@ -203,7 +203,7 @@ export default function Experience() {
                                     <FaGraduationCap />
                                     <span className="text-sm text-gray-400">{edu.period}</span>
                                 </div>
-                                <h3 className="text-xl font-semibold text-emerald-600">{edu.degree}</h3>
+                                <h3 className="text-xl font-semibold text-emerald-500">{edu.degree}</h3>
                                 <h4 className="text-gray-400 mb-3">{edu.institution}</h4>
                                 <p className="text-gray-300">{edu.description}</p>
                             </div>
@@ -246,7 +246,7 @@ export default function Experience() {
                                 </div>
 
                                 <div className="p-5">
-                                    <h3 className="text-xl font-semibold mb-1 text-emerald-600">{project.title}</h3>
+                                    <h3 className="text-xl font-semibold mb-1 text-emerald-500">{project.title}</h3>
                                     <p className="text-gray-300 text-sm">{project.description}</p>
 
                                     <div className="flex flex-wrap gap-2 mt-4">
