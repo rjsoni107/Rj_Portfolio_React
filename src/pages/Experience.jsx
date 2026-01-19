@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import {
-    FaBriefcase,
-    FaGraduationCap,
-    FaExternalLinkAlt,
-    FaGithub,
-    FaCode,
-} from "react-icons/fa";
+import { FaBriefcase, FaGraduationCap, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import schoolDashboardImage from '../assets/images/schoolDashboard.png';
+import remitzDashboardImage from '../assets/images/remitzDashboard.png';
+import exPayLoginImage from '../assets/images/exPayLogin.png';
+import fanozDashboardImage from '../assets/images/fanozDashboard.png';
+import dmtDashboardImage from '../assets/images/dmtDashboard.png';
+import letzpeDashboardImage from '../assets/images/letzpeDashboard.png';
 
 export default function Experience() {
     const [activeTab, setActiveTab] = useState("work");
@@ -20,45 +20,102 @@ export default function Experience() {
     const workExperience = [
         {
             id: 1,
-            title: "Senior Web Developer",
-            company: "Tech Solutions Inc.",
-            period: "2021 - Present",
-            description:
-                "Led team in building scalable web apps using React & Node.js. Improved performance by 40%.",
-            tags: ["React", "Node.js", "MongoDB", "AWS"],
+            title: "Frontend Developer Intern",
+            company: "Letzpay Solution Private Limited",
+            period: "July 2022 - January 2023",
+            description: "Worked as a Frontend Developer Intern in a Payment Gateway company. Assisted in developing and maintaining CRM modules using HTML, CSS, JavaScript, and jQuery. Collaborated with senior developers to implement UI components, dashboards, and basic API integrations. Gained hands-on experience in real-time fintech projects and version control using Git.",
+            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "CRM Systems"],
         },
         {
             id: 2,
-            title: "Frontend Developer",
-            company: "Digital Creations",
-            period: "2019 - 2021",
-            description:
-                "Built responsive UI and implemented pixel‑perfect designs with modern JS tools.",
-            tags: ["JavaScript", "React", "Redux", "SASS"],
+            title: "Software Engineer (Frontend)",
+            company: "Letzpay Solution Private Limited",
+            period: "January 2023 - Present",
+            description: "Currently working as a Software Engineer with a strong focus on Frontend Development. Designing and developing scalable CRM systems for payment gateway platforms. Working closely with product, design, and backend teams to build dashboards, reporting modules, user management, payouts, nodal transfer, and transaction routing features. Actively involved in performance optimization and reusable component development using React.",
+            tags: ["React.js", "JavaScript", "Redux", "jQuery", "HTML", "CSS", "Tailwind", "Bootstrap", "REST APIs", "Git"],
         },
     ];
 
     const education = [
         {
             id: 1,
-            degree: "Master of Computer Applications",
-            institution: "University of Technology",
-            period: "2015 - 2017",
-            description: "Specialized in Web Technologies & software engineering.",
+            degree: "Bachelor of Arts (B.A.)",
+            institution: "Govt College Barwala, Kurukshetra University",
+            period: "2016 - 2019",
+            description: "Completed Bachelor of Arts with graduation from Kurukshetra University.",
+        },
+        {
+            id: 2,
+            degree: "12th (H.B.S.E Board)",
+            institution: "J.D. Sr. Sec. School, Hisar",
+            period: "2015 - 2016",
+            description: "Completed 12th standard from Haryana Board of School Education.",
+        },
+        {
+            id: 3,
+            degree: "Advance Certificate in Computer Application (ACCA)",
+            institution: "AFCA Computer Center, Hisar",
+            period: "June 2019 - December 2019",
+            description: "Gained strong foundation in computer programming, database management, and software applications.",
+        },
+        {
+            id: 4,
+            degree: "Computer Diploma (Basic)",
+            institution: "Govt College Barwala, Hisar",
+            period: "July 2016 - July 2017",
+            description: "Learned basic computer concepts, operating systems, and office productivity tools.",
         },
     ];
 
     const projects = [
         {
             id: 1,
-            title: "E-commerce Platform",
-            description:
-                "A scalable full‑stack e‑commerce solution with auth, cart & payments.",
-            image: "/assets/project1.jpg",
-            tags: ["React", "Node.js", "MongoDB", "Stripe"],
-            demo: "#",
-            code: "#",
+            title: "Letzpe Payment Gateway CRM",
+            description: "Developed and enhanced a comprehensive CRM system for a payment gateway platform. Worked on dashboards, reporting, user management, payouts, nodal transfer, and transaction routing. Supported multiple user roles like admin, subadmin, merchant, and end-users.",
+            image: letzpeDashboardImage,
+            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
+            demo: "https://www.letzpe.com/crm/jsp/index",
         },
+        {
+            id: 2,
+            title: "Ex2Pay Payment Gateway CRM",
+            description: "Designed and developed responsive web pages using React.js. Integrated payment processing functionalities and optimized website performance. Built reusable and modular components for scalability.",
+            image: exPayLoginImage,
+            tags: ["React.js", "JavaScript", "Redux", "REST APIs"],
+            demo: "https://www.ex2pay.com/crm/jsp/login",
+        },
+        {
+            id: 3,
+            title: "Remitz – International Money Transfer Platform",
+            description: "Developed a modern web interface for an international remittance and forex platform. Implemented send money abroad, buy/sell forex, real-time currency conversion, and KYC-ready user flows. Focused on clean UI, and user-friendly transaction experience for cross-border payments.",
+            image: remitzDashboardImage,
+            tags: ["Fintech", "Money Transfer", "Forex", "React.js", "JavaScript", "Responsive UI", "Payment Flow"],
+            demo: "https://www.remitz.in/",
+        },
+        {
+            id: 4,
+            title: "School Fee Management System (Saral Fee)",
+            description: "Developed a fee management system supporting multiple user roles like Super Admin, School Admin, Teacher, Student, and Parent. Integrated secure payment gateways and automated fee reminders.",
+            image: schoolDashboardImage,
+            tags: ["HTML", "CSS", "JavaScript", "Payments", "Role Management"],
+            // demo: "https://liveschool.saralfee.com/school/login",
+        },
+        {
+            id: 5,
+            title: "Domestic Money Transfer (DMT)",
+            description: "Worked on Domestic Money Transfer platform supporting multiple user roles. Ensured secure and reliable money transfers with efficient transaction management.",
+            image: dmtDashboardImage,
+            tags: ["Payment Gateway", "CRM", "Transactions", "Finance"],
+            // demo: "https://dmt.letzpe.com/crm/jsp/index",
+        },
+        {
+            id: 6,
+            title: "Fanoz Admin Dashboard – Deposit & Payout System",
+            description: "Designed and developed a role-based fintech admin dashboard to manage deposits, payouts, customers, and fund transfers. Implemented analytics cards, date-wise filters, interactive charts, and structured navigation for invoices, bills, users, and customers. Focused on clean UI.",
+            image: fanozDashboardImage,
+            tags: ["React", "Fintech", "Admin Dashboard", "CRM", "Payment System", "Analytics", "Responsive UI"],
+            // demo: "#",
+        }
     ];
 
     return (
@@ -81,7 +138,7 @@ export default function Experience() {
                             key={tab.key}
                             onClick={() => setActiveTab(tab.key)}
                             className={`flex items-center gap-2 px-6 py-2 rounded-full border backdrop-blur-xl transition-all duration-300 text-sm
-                ${activeTab === tab.key
+                                ${activeTab === tab.key
                                     ? "bg-blue-600 border-blue-500 shadow-lg shadow-blue-500/30"
                                     : "bg-white/5 border-white/10 hover:bg-white/10"
                                 }`}
@@ -109,7 +166,7 @@ export default function Experience() {
                                     <FaBriefcase />
                                     <span className="text-sm text-gray-400">{exp.period}</span>
                                 </div>
-                                <h3 className="text-xl font-semibold text-blue-600">{exp.title}</h3>
+                                <h3 className="text-xl font-semibold text-emerald-600">{exp.title}</h3>
                                 <h4 className="text-gray-400 mb-3">{exp.company}</h4>
                                 <p className="text-gray-300">{exp.description}</p>
 
@@ -176,33 +233,27 @@ export default function Experience() {
                                         className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
                                     />
 
-                                    <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition-all">
+                                    {project.demo && <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition-all">
                                         <a
                                             href={project.demo}
                                             target="_blank"
-                                            className="flex items-center gap-2 text-white bg-blue-600 px-3 py-1 rounded"
+                                            className="flex items-center gap-2 text-white bg-blue-600 px-3 py-1 rounded hover:bg-blue-700 hover:text-white transition-all"
                                         >
                                             <FaExternalLinkAlt /> Demo
                                         </a>
-                                        <a
-                                            href={project.code}
-                                            target="_blank"
-                                            className="flex items-center gap-2 text-white bg-gray-700 px-3 py-1 rounded"
-                                        >
-                                            <FaGithub /> Code
-                                        </a>
                                     </div>
+                                    }
                                 </div>
 
                                 <div className="p-5">
-                                    <h3 className="text-xl font-semibold mb-1 text-blue-600">{project.title}</h3>
+                                    <h3 className="text-xl font-semibold mb-1 text-emerald-600">{project.title}</h3>
                                     <p className="text-gray-300 text-sm">{project.description}</p>
 
                                     <div className="flex flex-wrap gap-2 mt-4">
                                         {project.tags.map((tag, i) => (
                                             <span
                                                 key={i}
-                                                className="text-xs px-2 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30"
+                                                className="text-xs px-2 py-1 rounded-full bg-blue-500/20 text-blue-200 border border-blue-500/30"
                                             >
                                                 {tag}
                                             </span>
