@@ -24,7 +24,7 @@ export default function Experience() {
             company: "Letzpay Solution Private Limited",
             period: "July 2022 - January 2023",
             description: "Worked as a Frontend Developer Intern in a Payment Gateway company. Assisted in developing and maintaining CRM modules using HTML, CSS, JavaScript, and jQuery. Collaborated with senior developers to implement UI components, dashboards, and basic API integrations. Gained hands-on experience in real-time fintech projects and version control using Git.",
-            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "CRM Systems"],
+            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "CRM Systems", "Payment Gateway", "Fintech"],
         },
         {
             id: 2,
@@ -32,7 +32,7 @@ export default function Experience() {
             company: "Letzpay Solution Private Limited",
             period: "January 2023 - Present",
             description: "Currently working as a Software Engineer with a strong focus on Frontend Development. Designing and developing scalable CRM systems for payment gateway platforms. Working closely with product, design, and backend teams to build dashboards, reporting modules, user management, payouts, nodal transfer, and transaction routing features. Actively involved in performance optimization and reusable component development using React.",
-            tags: ["React.js", "JavaScript", "Redux", "jQuery", "HTML", "CSS", "Tailwind", "Bootstrap", "REST APIs", "Git"],
+            tags: ["React.js", "JavaScript", "React Router", "Redux Toolkit", "jQuery", "HTML", "CSS", "Tailwind", "Bootstrap", "REST APIs", "Node.js", "Git"],
         },
     ];
 
@@ -81,15 +81,15 @@ export default function Experience() {
             title: "Ex2Pay Payment Gateway CRM",
             description: "Designed and developed responsive web pages using React.js. Integrated payment processing functionalities and optimized website performance. Built reusable and modular components for scalability.",
             image: exPayLoginImage,
-            tags: ["React.js", "JavaScript", "Redux", "REST APIs"],
+            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
             demo: "https://www.ex2pay.com/crm/jsp/login",
         },
         {
             id: 3,
             title: "Remitz – International Money Transfer Platform",
-            description: "Developed a modern web interface for an international remittance and forex platform. Implemented send money abroad, buy/sell forex, real-time currency conversion, and KYC-ready user flows. Focused on clean UI, and user-friendly transaction experience for cross-border payments.",
+            description: "Developed a modern web interface for an international remittance and forex platform. Implemented send money abroad, buy/sell forex, real-time currency conversion. Focused on clean UI, and user-friendly transaction experience for cross-border payments.",
             image: remitzDashboardImage,
-            tags: ["Fintech", "Money Transfer", "Forex", "React.js", "JavaScript", "Responsive UI", "Payment Flow"],
+            tags: ["Fintech", "Money Transfer", "Forex", "React.js", "Tailwind CSS", "Responsive UI", "Payment Flow"],
             demo: "https://www.remitz.in/",
         },
         {
@@ -97,7 +97,7 @@ export default function Experience() {
             title: "School Fee Management System (Saral Fee)",
             description: "Developed a fee management system supporting multiple user roles like Super Admin, School Admin, Teacher, Student, and Parent. Integrated secure payment gateways and automated fee reminders.",
             image: schoolDashboardImage,
-            tags: ["HTML", "CSS", "JavaScript", "Payments", "Role Management"],
+            tags: ["HTML", "CSS", "JavaScript", "Payments", "Role Management", "Bootstrap"],
             // demo: "https://liveschool.saralfee.com/school/login",
         },
         {
@@ -105,13 +105,13 @@ export default function Experience() {
             title: "Domestic Money Transfer (DMT)",
             description: "Worked on Domestic Money Transfer platform supporting multiple user roles. Ensured secure and reliable money transfers with efficient transaction management.",
             image: dmtDashboardImage,
-            tags: ["Payment Gateway", "CRM", "Transactions", "Finance"],
+            tags: ["Payment Gateway", "CRM", "Transactions", "Finance", "Bootstrap"],
             // demo: "https://dmt.letzpe.com/crm/jsp/index",
         },
         {
             id: 6,
             title: "Fanoz Admin Dashboard – Deposit & Payout System",
-            description: "Designed and developed a role-based fintech admin dashboard to manage deposits, payouts, customers, and fund transfers. Implemented analytics cards, date-wise filters, interactive charts, and structured navigation for invoices, bills, users, and customers. Focused on clean UI.",
+            description: "Designed and developed a role-based fintech admin dashboard to manage deposits, payouts, customers, and fund transfers. Implemented analytics cards, date-wise filters, interactive charts, and structured navigation for invoices, bills, users, and customers.",
             image: fanozDashboardImage,
             tags: ["React", "Fintech", "Admin Dashboard", "CRM", "Payment System", "Analytics", "Responsive UI"],
             // demo: "#",

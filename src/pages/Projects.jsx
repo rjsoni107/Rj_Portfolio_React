@@ -1,104 +1,14 @@
-// import React from 'react';
-// import { motion } from 'framer-motion';
-// import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-
-// const Projects = () => {
-//     const projects = [
-//         {
-//             id: 1,
-//             title: 'E-commerce Platform',
-//             description: 'A full-stack e-commerce platform with user authentication, product management, and payment integration.',
-//             tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-//             demo: '#',
-//             code: '#'
-//         },
-//         {
-//             id: 2,
-//             title: 'Task Management App',
-//             description: 'A collaborative task management application with real-time updates and team collaboration features.',
-//             tags: ['React', 'Firebase', 'Material-UI'],
-//             demo: '#',
-//             code: '#'
-//         },
-//         {
-//             id: 3,
-//             title: 'Portfolio Website',
-//             description: 'A personal portfolio website to showcase projects, skills, and experience.',
-//             tags: ['React', 'Framer Motion', 'Tailwind CSS'],
-//             demo: '#',
-//             code: '#'
-//         },
-//     ];
-
-//     return (
-//         <div className="container mx-auto px-4">
-//             <motion.div
-//                 initial={{ opacity: 0, y: 20 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.5 }}
-//                 viewport={{ once: true }}
-//                 className="text-center mb-16"
-//             >
-//                 <h2 className="text-4xl font-bold mb-4">My Projects</h2>
-//                 <p className="text-gray-600 max-w-2xl mx-auto">Here are some of my recent projects that showcase my skills and experience.</p>
-//             </motion.div>
-
-//             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-//                 {projects.map((project) => (
-//                     <motion.div
-//                         key={project.id}
-//                         initial={{ opacity: 0, y: 20 }}
-//                         whileInView={{ opacity: 1, y: 0 }}
-//                         transition={{ duration: 0.5, delay: project.id * 0.1 }}
-//                         viewport={{ once: true }}
-//                         className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-//                     >
-//                         <div className="h-48 bg-gray-200"></div>
-//                         <div className="p-6">
-//                             <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-//                             <p className="text-gray-600 mb-4">{project.description}</p>
-//                             <div className="flex flex-wrap gap-2 mb-4">
-//                                 {project.tags.map((tag, index) => (
-//                                     <span key={index} className="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">
-//                                         {tag}
-//                                     </span>
-//                                 ))}
-//                             </div>
-//                             <div className="flex space-x-4">
-//                                 <a
-//                                     href={project.demo}
-//                                     target="_blank"
-//                                     rel="noopener noreferrer"
-//                                     className="flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-//                                 >
-//                                     <FaExternalLinkAlt className="mr-1" /> Demo
-//                                 </a>
-//                                 <a
-//                                     href={project.code}
-//                                     target="_blank"
-//                                     rel="noopener noreferrer"
-//                                     className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
-//                                 >
-//                                     <FaGithub className="mr-1" /> Code
-//                                 </a>
-//                             </div>
-//                         </div>
-//                     </motion.div>
-//                 ))}
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default Projects;
-
-
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import rjElectronicsImage from '../assets/images/rjElectronicsBanner.png';
+import clockImage from '../assets/images/clockImage.png';
+import popupImage from '../assets/images/popUpImage.png';
+import rjSoniPortfolioImage from '../assets/images/RjSoniPortfolioImage.png';
+import chatSyncImage from '../assets/images/chatSyncImage.png';
+import datePickerImage from '../assets/images/datePickerImage.png';
 
 export default function Projects() {
     useEffect(() => {
@@ -108,30 +18,59 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: 'E-commerce Platform',
-            description:
-                'A full-stack e-commerce platform with secure auth, product management and Stripe payments.',
-            tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-            demo: '#',
-            code: '#',
+            title: 'Modern E-Commerce Electronics Store',
+            description: 'A fully responsive and visually engaging e-commerce website designed for electronic products. Built using HTML, CSS, and JavaScript with smooth GSAP animations. Features a dynamic product grid, interactive UI, and seamless performance across all devices.',
+            image: rjElectronicsImage,
+            tags: ['HTML', 'CSS', 'JavaScript', 'Gsap', 'Framer Motion', 'Responsive'],
+            demo: 'https://rj-electronics.vercel.app/',
+            code: 'https://github.com/rjsoni107/rj-electronics',
         },
         {
             id: 2,
-            title: 'Task Management App',
-            description:
-                'Real-time collaborative task app with presence, notifications and offline support.',
-            tags: ['React', 'Firebase', 'Realtime'],
-            demo: '#',
-            code: '#',
+            title: 'Real-Time Chat & CRM Management System',
+            description: 'A real-time chat application integrated with a CRM system, built for team collaboration and customer management. Includes live messaging, notifications, user presence, and real-time updates using Socket.io. Designed for scalability and smooth user experience.',
+            image: chatSyncImage,
+            tags: ['React', 'MongoDB', 'Node.js', 'Socket.io', 'Realtime'],
+            demo: 'https://chatsync-crm.onrender.com/login',
+            code: 'https://github.com/rjsoni107/CRM_Project_with_NodeJs',
         },
         {
             id: 3,
-            title: 'Portfolio Website',
-            description: 'Personal portfolio showcasing projects, blog and contact with animations.',
-            tags: ['React', 'Framer Motion', 'Tailwind'],
-            demo: '#',
-            code: '#',
+            title: 'Personal Portfolio Website',
+            description: 'A personal portfolio website showcasing my projects, skills, and contact details. Designed with modern UI, smooth animations, and a fully responsive layout to deliver a clean and professional online presence.',
+            image: rjSoniPortfolioImage,
+            tags: ['HTML', 'CSS', 'JavaScript', 'Responsive'],
+            demo: 'https://rjsoni.vercel.app/',
+            code: 'https://github.com/rjsoni107/rjsoni',
         },
+        {
+            id: 4,
+            title: "Date Range Picker Library",
+            description: "A customizable date range picker built in vanilla JavaScript, allowing users to select a date range with ease. This library provides a simple and flexible way to integrate a date range selection feature into your web applications.",
+            tags: ["HTML", "CSS", "JavaScript"],
+            image: datePickerImage,
+            demo: "https://date-range-picker-three.vercel.app/",
+            code: "https://github.com/rjsoni107/DateRangePicker"
+        },
+        {
+            id: 5,
+            title: 'Dynamic Popup Library',
+            description: 'A customizable popup management system designed to show animated status messages such as success, error, and confirmation alerts. Built with pure JavaScript, featuring smooth animations and reusable components.',
+            tags: ['HTML', 'CSS', 'JavaScript'],
+            image: popupImage,
+            demo: 'https://dynamicpopuphandler.vercel.app/',
+            code: 'https://github.com/rjsoni107/popup-handler',
+        },
+        {
+            id: 6,
+            title: 'Real-Time Analog Clock Application',
+            description: 'A real-time analog clock application built with HTML, CSS, and JavaScript. Features smooth animations, a responsive layout, and accurate time display.',
+            tags: ['HTML', 'CSS', 'JavaScript'],
+            image: clockImage,
+            demo: 'https://clock-git-project.vercel.app/',
+            code: 'https://github.com/rjsoni107/Clock_Git_Project',
+        },
+
     ];
 
     // helper for mouse parallax / tilt — sets CSS variables on card element
@@ -172,34 +111,35 @@ export default function Projects() {
 
             {/* Inline styles for card effects (kept in component for portability) */}
             <style>{`
-        .project-card { 
-          transform: perspective(900px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
-          transition: transform 0.12s ease-out, box-shadow 0.2s ease;
-        }
-        .project-card::before {
-          content: "";
-          position: absolute; inset: 0; border-radius: 1rem;
-          padding: 1px; /* creates border effect */
-          background: linear-gradient(120deg, rgba(99,102,241,0.12), rgba(124,58,237,0.08));
-          -webkit-mask: linear-gradient(#fff,#fff) content-box, linear-gradient(#fff,#fff);
-          -webkit-mask-composite: xor;
-          mask-composite: exclude;
-          pointer-events: none;
-        }
-        .sheen {
-          position: absolute; inset: 0; pointer-events: none; border-radius: 1rem; overflow: hidden;
-        }
-        .sheen::after {
-          content: ""; position: absolute; left: var(--sx, 50%); top: var(--sy, 50%); transform: translate(-50%, -50%) rotate(25deg);
-          width: 220%; height: 120%; background: radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 15%, rgba(255,255,255,0) 40%);
-          mix-blend-mode: overlay; filter: blur(14px); opacity: 0.85; transition: left 0.12s, top 0.12s;
-        }
-        /* neon tag animations */
-        .neon-tag { background: linear-gradient(90deg, rgba(99,102,241,0.12), rgba(124,58,237,0.12)); border: 1px solid rgba(124,58,237,0.18); color: #eae6ff; }
-        .project-grid { grid-auto-rows: 1fr; }
-        @keyframes floatSoft { 0%{transform: translateY(0)}50%{transform: translateY(-8px)}100%{transform: translateY(0)} }
-        .float-soft { animation: floatSoft 6s ease-in-out infinite; }
-      `}</style>
+                .project-card { 
+                    transform: perspective(900px) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+                    transition: transform 0.12s ease-out, box-shadow 0.2s ease;
+                }
+                .project-card::before {
+                    content: "";
+                    position: absolute; inset: 0; border-radius: 1rem;
+                    padding: 1px; /* creates border effect */
+                    background: linear-gradient(120deg, rgba(99,102,241,0.12), rgba(124,58,237,0.08));
+                    -webkit-mask: linear-gradient(#fff,#fff) content-box, linear-gradient(#fff,#fff);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                    pointer-events: none;
+                }
+                .sheen {
+                    position: absolute; inset: 0; pointer-events: none; border-radius: 1rem; overflow: hidden;
+                }
+                .sheen::after {
+                    content: ""; position: absolute; left: var(--sx, 50%); top: var(--sy, 50%); transform: translate(-50%, -50%) rotate(25deg);
+                    width: 220%; height: 120%; background: radial-gradient(ellipse at center, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 15%, rgba(255,255,255,0) 40%);
+                    mix-blend-mode: overlay; filter: blur(14px); opacity: 0.85; transition: left 0.12s, top 0.12s;
+                }
+                /* neon tag animations */
+                .neon-tag { background: linear-gradient(90deg, rgba(99,102,241,0.12), rgba(124,58,237,0.12)); border: 1px solid rgba(124,58,237,0.18); color: #eae6ff; }
+                .project-grid { grid-auto-rows: 1fr; }
+                @keyframes floatSoft { 0%{transform: translateY(0)}50%{transform: translateY(-8px)}100%{transform: translateY(0)} }
+                .float-soft { animation: floatSoft 6s ease-in-out infinite; }
+            `}
+            </style>
 
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
@@ -232,7 +172,7 @@ export default function Projects() {
                             {/* Card media / placeholder */}
                             <div className="h-44 bg-gradient-to-br from-white/6 to-white/3 flex items-center justify-center">
                                 <div className="w-3/4 h-32 rounded-lg bg-gradient-to-r from-emerald-400/10 to-purple-400/10 border border-white/8 flex items-center justify-center text-sm text-gray-200">
-                                    Project Preview
+                                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                                 </div>
                             </div>
 
@@ -251,13 +191,13 @@ export default function Projects() {
                                 </div>
 
                                 <div className="flex items-center gap-4">
-                                    <a href={project.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-3 py-2 rounded-full bg-gradient-to-r from-emerald-400/20 to-blue-400/10 border border-emerald-400/20 hover:scale-[1.02] transition">
+                                    {project.demo && <a href={project.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-3 py-2 rounded-full bg-gradient-to-r from-emerald-400/20 to-blue-400/10 border border-emerald-400/20 hover:scale-[1.02] transition">
                                         <FaExternalLinkAlt /> <span>Demo</span>
-                                    </a>
+                                    </a>}
 
-                                    <a href={project.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-3 py-2 rounded-full bg-white/5 border border-white/8 hover:bg-white/6 transition">
+                                    {project.code && <a href={project.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium px-3 py-2 rounded-full bg-white/5 border border-white/8 hover:bg-white/6 transition">
                                         <FaGithub /> <span>Code</span>
-                                    </a>
+                                    </a>}
                                 </div>
 
                                 {/* subtle floating decorative orb */}

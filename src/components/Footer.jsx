@@ -14,10 +14,10 @@ const Footer = () => {
     };
 
     const socialLinks = [
-        { icon: <FaGithub />, url: "https://github.com/rjsoni107", color: "#78a5f4" },
-        { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246", color: "#78a5f4" },
-        { icon: <FaInstagram />, url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm", color: "#78a5f4" },
-        { icon: <FaFacebook />, url: "https://www.facebook.com/share/1BVBcybbH7/", color: "#78a5f4" }
+        { icon: <FaGithub className='text-white' size={25} />, url: "https://github.com/rjsoni107" },
+        { icon: <FaLinkedin className='text-[#0a66c2]' size={25} />, url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246" },
+        { icon: <FaInstagram className='text-[#f09433]' size={25} />, url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm" },
+        { icon: <FaFacebook className='text-[#5f9cff]' size={25} />, url: "https://www.facebook.com/share/1BVBcybbH7/" }
     ];
 
     return (
@@ -61,9 +61,8 @@ const Footer = () => {
                                 <a
                                     key={i}
                                     href={item.url}
-                                    className="relative group text-xl p-3 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 hover:border-cyan-400 transition-all"
+                                    className="relative group text-xl p-3 rounded-full bg-black backdrop-blur-xl border border-white/20 hover:border-cyan-400 transition-all"
                                 >
-                                    <span className="absolute inset-0 rounded-full border border-cyan-400 opacity-0 group-hover:opacity-100 group-hover:animate-orbit"></span>
                                     {item.icon}
                                 </a>
                             ))}
@@ -76,7 +75,7 @@ const Footer = () => {
                         <ul className="space-y-2 text-white/70">
                             {navLinks.map((link, i) => (
                                 <li key={i}>
-                                    <a href={`#${link}`} onClick={(e) => { e.preventDefault(); handleNavClick(link); }} className="hover:text-cyan-400 transition">
+                                    <a href={`#${link}`} onClick={(e) => { e.preventDefault(); handleNavClick(link); }} className="hover:text-cyan-400 text-white transition">
                                         {link.charAt(0).toUpperCase() + link.slice(1)}
                                     </a>
                                 </li>
