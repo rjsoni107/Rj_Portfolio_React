@@ -2,6 +2,7 @@ import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import heroImg from "../assets/images/raj.webp";
 import headerBg from "../assets/images/header-bg.webp";
+import mobileBg from "../assets/images/mobile-header-bg.webp";
 import { resumeUrl } from "../assets/js/global";
 import Header from "../components/Header";
 
@@ -12,7 +13,13 @@ const Home = () => {
         <section id="home" className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
             {/* Background */}
             <div className="absolute inset-0">
-                <img src={headerBg} alt="Background" className="w-full h-full lg:h-auto object-cover" fetchPriority="high" />
+                {/* <img src={headerBg} alt="Background" className="w-full h-full lg:h-auto object-cover" fetchPriority="high" /> */}
+                {/* Desktop Background */}
+                <img src={headerBg} alt="Background" className="hidden md:block w-full h-full lg:h-auto object-cover" fetchPriority="high" />
+
+                {/* Mobile Background */}
+                <img src={mobileBg} alt="Mobile Background" className="block md:hidden w-full h-full object-cover" fetchPriority="high" />
+
                 <div className="absolute inset-0 bg-black/40" />
             </div>
 
@@ -20,59 +27,62 @@ const Home = () => {
             <Header />
 
             {/* Content */}
-            <div className="relative z-10 mt-28 mb-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-1 px-16 rounded-3xl backdrop-blur-sm shadow-lg">
+            <div className="relative z-10 mt-28 mb-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-1 px-16 rounded-3xl md:backdrop-blur-sm md:shadow-lg bg-white/15">
                 {/* Left: Image */}
                 <div className="flex-1 flex justify-center lg:justify-start">
                     <div className="relative group perspective-1000">
                         <img
                             src={heroImg}
                             alt="Raj Soni"
-                            className="w-72 xs:w-60 sm:w-72 md:w-80 h-auto rounded-3xl transition-transform duration-500 transform-gpu group-hover:rotate-y-3 group-hover:scale-105"
+                            className="hidden md:block w-72 xs:w-60 sm:w-72 md:w-80 h-auto rounded-3xl transition-transform duration-500 transform-gpu group-hover:rotate-y-3 group-hover:scale-105"
                             loading="eager"
                             fetchPriority="high"
                         />
                     </div>
                 </div>
 
-                {/* Right: Text – new hero copy like screenshot */}
                 <div className="flex-2 max-w-xl text-white text-center lg:text-left space-y-5 sm:space-y-4 ">
                     {/* <span className="inline-block bg-emerald-600/90 px-6 py-1.5 sm:px-8 sm:py-2 rounded-full animate-pulse">HI!</span> */}
 
                     {/* main heading */}
-                    <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold leading-tight tracking-tight">
-                        <span className="block text-gray-800">Building High-Speed</span>
+                    <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold leading-tight tracking-tight mt-14 md:mt-0">
+                        <span className="block md:text-gray-200 text-white">Building High-Speed</span>
                         <span className="block">
-                            <span className="text-emerald-600">Front-End Experiences</span>
+                            <span className="text-emerald-500">Front-End Experiences</span>
                         </span>
-                        <span className="block text-gray-800">for Fintech & Beyond</span>
+                        <span className="block md:text-gray-200 text-white">for Fintech & Beyond</span>
                     </h1>
 
                     {/* badges */}
-                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-[13px] sm:text-sm">
-                        <span className="rounded-full border border-emerald-400/90 bg-emerald-700 px-4 py-1">
+                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-[15px] sm:text-sm">
+                        <span className="rounded-full border border-emerald-400/90 bg-emerald-700 px-4 pt-[1px] pb-[3px]">
                             3+ years experience
                         </span>
-                        <span className="rounded-full border border-blue-400/90 bg-blue-800/80 px-4 py-1">
+                        <span className="rounded-full border border-blue-400/90 bg-blue-800/80 px-4 pt-[1px] pb-[3px]">
                             Payment Gateway · Fintech
                         </span>
                     </div>
+
                     {/* top label */}
                     <div className="inline-flex items-center gap-2 rounded-full bg-black/60 border border-white/90 px-4 py-1 text-[14px] sm:text-xs tracking-[0.2em] mx-auto lg:mx-0">
                         <span className="text-lg">🔥</span>
-                        <span className="font-bold text-emerald-500">Kuldeep Soni</span> - Front-end Developer
+                        <div className="flex flex-col md:flex-row items-center gap-2">
+                            <span className="font-bold text-emerald-500 text-lg md:text-sm">Kuldeep Soni</span>
+                            <span>Front-end Developer</span>
+                        </div>
                         <span className="text-lg">🔥</span>
                     </div>
 
                     {/* animated specialties */}
-                    <div className="text-sm sm:text-base md:text-lg text-slate-100/90 flex flex-wrap items-center justify-center lg:justify-start gap-2">
-                        <span className="text-slate-900">Specialised in</span>
+                    <div className="text-lg text-slate-100/90 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                        <span className="md:text-slate-100 text-white">Specialised in</span>
                         <TypeAnimation
                             sequence={sequence}
                             wrapper="span"
                             speed={30}
                             style={{ display: "inline-block" }}
                             repeat={Infinity}
-                            className="font-semibold text-blue-900"
+                            className="font-semibold md:text-emerald-400 text-emerald-500"
                         />
                     </div>
 

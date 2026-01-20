@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp, FaFacebook, FaInstagram } from 'react-icons/fa';
 import headerLogo from "../assets/images/logo.webp";
+import '../css/footer.css';
 
 const Footer = () => {
 
     const currentYear = new Date().getFullYear();
-    const navLinks = ['home', 'about', 'services', 'experience', 'projects', 'contact'];
+    const navLinks = ['home', 'about', 'services', 'experience', 'projects'];
     const handleNavClick = (sectionId) => {
         const el = document.getElementById(sectionId);
         if (el) {
@@ -14,11 +15,42 @@ const Footer = () => {
     };
 
     const socialLinks = [
-        { icon: <FaGithub className='text-white' size={25} />, url: "https://github.com/rjsoni107" },
-        { icon: <FaLinkedin className='text-[#0a66c2]' size={25} />, url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246" },
-        { icon: <FaInstagram className='text-[#f09433]' size={25} />, url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm" },
-        { icon: <FaFacebook className='text-[#5f9cff]' size={25} />, url: "https://www.facebook.com/share/1BVBcybbH7/" }
+        {
+            icon: <FaGithub color="#ffffff" size={25} />,
+            url: "https://github.com/rjsoni107"
+        },
+        {
+            icon: <FaLinkedin color="#0A66C2" size={25} />,
+            url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246"
+        },
+        {
+            icon: (
+                <svg width="26" height="26" viewBox="0 0 24 24">
+                    <defs>
+                        <linearGradient id="instaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#fdf497" />
+                            <stop offset="5%" stopColor="#fdf497" />
+                            <stop offset="45%" stopColor="#fd5949" />
+                            <stop offset="60%" stopColor="#d6249f" />
+                            <stop offset="90%" stopColor="#285AEB" />
+                        </linearGradient>
+                    </defs>
+
+                    <path
+                        fill="url(#instaGradient)"
+                        d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"
+                    />
+                </svg>
+            ),
+            url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm"
+        },
+
+        {
+            icon: <FaFacebook color="#559fff" size={25} />,
+            url: "https://www.facebook.com/share/1BVBcybbH7/"
+        }
     ];
+
 
     return (
         <footer className="relative overflow-hidden pt-20 pb-8 bg-black backdrop-blur-xl border-t border-white/10 footer-wrapper">
@@ -56,12 +88,12 @@ const Footer = () => {
                         <p className="mb-4 text-white/70">A passionate web developer dedicated to creating beautiful, responsive and polished web experiences.</p>
 
                         {/* Social Icons - Neon Orbit */}
-                        <div className="flex gap-4 mt-4">
+                        <div className="flex gap-6 mt-4">
                             {socialLinks.map((item, i) => (
                                 <a
                                     key={i}
                                     href={item.url}
-                                    className="relative group text-xl p-3 rounded-full bg-black backdrop-blur-xl border border-white/20 hover:border-cyan-400 transition-all"
+                                    className="relative group text-xl p-2 rounded-full bg-black backdrop-blur-xl border border-white/20 hover:border-cyan-400 transition-all"
                                 >
                                     {item.icon}
                                 </a>
@@ -91,7 +123,7 @@ const Footer = () => {
                         <form className="flex items-center gap-3">
                             <input
                                 type="email"
-                                className="w-full px-4 py-3 rounded-lg bg-black/30 border border-white/10 text-white placeholder-white/40 focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(0,255,255,0.6)] transition"
+                                className="w-full px-4 py-3 rounded-lg bg-black/30 border border-white text-white placeholder-white/40 focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(0,255,255,0.6)] transition"
                                 placeholder="Your email address"
                                 required
                             />
