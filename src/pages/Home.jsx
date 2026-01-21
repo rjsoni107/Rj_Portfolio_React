@@ -1,6 +1,7 @@
 import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import heroImg from "../assets/images/raj.webp";
+import heroImgMobile from "../assets/images/raj_mobile.webp";
 import headerBg from "../assets/images/header-bg.webp";
 import mobileBg from "../assets/images/mobile-header-bg.webp";
 import { resumeUrl } from "../assets/js/global";
@@ -27,7 +28,7 @@ const Home = () => {
             <Header />
 
             {/* Content */}
-            <div className="relative z-10 mt-28 mb-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-1 px-16 rounded-3xl md:backdrop-blur-sm md:shadow-lg bg-white/15">
+            <div className="relative z-10 mt-28 mb-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-1 px-16 rounded-3xl md:backdrop-blur-sm backdrop-blur-[1px] md:shadow-lg md:bg-white/15">
                 {/* Left: Image */}
                 <div className="flex-1 flex justify-center lg:justify-start">
                     <div className="relative group perspective-1000">
@@ -41,11 +42,11 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="flex-2 max-w-xl text-white text-center lg:text-left space-y-5 sm:space-y-4 ">
+                <div className="flex-2 max-w-xl text-white text-center lg:text-left space-y-8 sm:space-y-4 ">
                     {/* <span className="inline-block bg-emerald-600/90 px-6 py-1.5 sm:px-8 sm:py-2 rounded-full animate-pulse">HI!</span> */}
 
                     {/* main heading */}
-                    <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold leading-tight tracking-tight mt-14 md:mt-0">
+                    <h1 className="text-3xl sm:text-4xl md:text-4xl font-extrabold leading-tight tracking-tight mt-14 md:mt-0 space-y-2">
                         <span className="block md:text-gray-200 text-white">Building High-Speed</span>
                         <span className="block">
                             <span className="text-emerald-500">Front-End Experiences</span>
@@ -54,7 +55,7 @@ const Home = () => {
                     </h1>
 
                     {/* badges */}
-                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-[15px] sm:text-sm">
+                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-[15px] sm:text-sm md:space-y-0 space-y-2">
                         <span className="rounded-full border border-emerald-400/90 bg-emerald-700 px-4 pt-[1px] pb-[3px]">
                             3+ years experience
                         </span>
