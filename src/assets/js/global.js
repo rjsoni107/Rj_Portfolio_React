@@ -3,7 +3,7 @@ const baseFromTag = (typeof document !== 'undefined' && document.querySelector('
 const basePath = baseFromVite || baseFromTag || '/';
 
 window.BASE_PATH = basePath;
-export const resumeUrl = "https://drive.google.com/file/d/1kG5V8ANSF5YR-MwL4hQuorBCpXKPD_J4/view?usp=sharing";
+export const resumeUrl = "https://drive.google.com/file/d/1kG5V8ANSF5YR-MwL4hQuorBCpXKPD_J4/view?usp=drive_link";
 
 
 export const categoryOptions = [
