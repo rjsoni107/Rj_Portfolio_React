@@ -78,19 +78,19 @@ export default function Experience() {
         },
         {
             id: 2,
-            title: "Ex2Pay Payment Gateway CRM",
-            description: "Designed and developed responsive web pages using React.js. Integrated payment processing functionalities and optimized website performance. Built reusable and modular components for scalability.",
-            image: exPayLoginImage,
-            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
-            demo: "https://www.ex2pay.com/crm/jsp/login",
-        },
-        {
-            id: 3,
             title: "Remitz – International Money Transfer Platform",
             description: "Developed a modern web interface for an international remittance and forex platform. Implemented send money abroad, buy/sell forex, real-time currency conversion. Focused on clean UI, and user-friendly transaction experience for cross-border payments.",
             image: remitzDashboardImage,
             tags: ["Fintech", "Money Transfer", "Forex", "React.js", "Tailwind CSS", "Responsive UI", "Payment Flow"],
             demo: "https://www.remitz.in/",
+        },
+        {
+            id: 3,
+            title: "Ex2Pay Payment Gateway CRM",
+            description: "Designed and developed responsive web pages using React.js. Integrated payment processing functionalities and optimized website performance. Built reusable and modular components for scalability.",
+            image: exPayLoginImage,
+            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
+            // demo: "https://www.ex2pay.com/crm/jsp/login",
         },
         {
             id: 4,
