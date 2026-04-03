@@ -38,7 +38,7 @@ const About = () => {
                         About <span className="text-white">Myself</span>
                     </h2>
                     <p className="text-gray-300 text-md leading-relaxed first-letter:text-4xl first-letter:font-bold first-letter:text-emerald-400">
-                        Passionate Front-End Developer with 3.5 years of experience in a Payment Gateway company, specialising in Web Development and optimising landing pages. Proficient in ReactJS, HTML, CSS, JavaScript and jQuery. Throughout my career, I have prioritised creating scalable and well-documented code. I enjoy working collaboratively, but can also run projects independently.
+                        Passionate Front-End Developer with 4 years of experience in a Payment Gateway company, specialising in Web Development and optimising landing pages. Proficient in ReactJS, HTML, CSS, JavaScript and jQuery. Throughout my career, I have prioritised creating scalable and well-documented code. I enjoy working collaboratively, but can also run projects independently.
                     </p>
                     <p className="text-gray-300 text-md leading-relaxed">
                         At Letzpay Solution Private Limited, I've contributed significantly to web development projects, collaborating with design and back-end teams to create reusable code and ensure smooth functionality. My skills also extend to API integration, Bootstrap, and responsive web design.
