@@ -57,7 +57,7 @@ const Home = () => {
                     {/* badges */}
                     <div className="flex flex-wrap gap-3 justify-center lg:justify-start text-[15px] sm:text-sm md:space-y-0 space-y-2">
                         <span className="rounded-full border border-emerald-400/90 bg-emerald-700 px-4 pt-[1px] pb-[3px]">
-                            3+ years experience
+                            4+ years experience
                         </span>
                         <span className="rounded-full border border-blue-400/90 bg-blue-800/80 px-4 pt-[1px] pb-[3px]">
                             Payment Gateway · Fintech
