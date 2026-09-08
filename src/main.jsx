@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 // Register Service Worker for PWA
-if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((reg) => console.log('PWA Service Worker registered:', reg.scope))
