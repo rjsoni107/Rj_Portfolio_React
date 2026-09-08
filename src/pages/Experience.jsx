@@ -9,6 +9,7 @@ import exPayLoginImage from '../assets/images/exPayLogin.png';
 import fanozDashboardImage from '../assets/images/fanozDashboard.png';
 import dmtDashboardImage from '../assets/images/dmtDashboard.png';
 import letzpeDashboardImage from '../assets/images/letzpeDashboard.png';
+import birsaImage from '../assets/images/birsaImage.png';
 
 export default function Experience() {
     const [activeTab, setActiveTab] = useState("work");
@@ -78,20 +79,28 @@ export default function Experience() {
         },
         {
             id: 2,
+            title: "Multi-Tier E-Governance CRM & Public Works Management System",
+            description: "An enterprise-grade CRM and e-governance platform designed to streamline administrative workflows across multi-level government bodies (State to Panchayat). 5-Tier Hierarchical Dashboard (State, District, Block, Panchayat, Mukhiya)",
+            image: birsaImage,
+            tags: ['React.js', 'Redux Toolkit', 'MUI', 'Bootstrap', 'i18next', 'REST APIs'],
+            // demo: "https://www.letzpe.com/crm/jsp/index",
+        },
+        {
+            id: 2,
             title: "Remitz – International Money Transfer Platform",
             description: "Developed a modern web interface for an international remittance and forex platform. Implemented send money abroad, buy/sell forex, real-time currency conversion. Focused on clean UI, and user-friendly transaction experience for cross-border payments.",
             image: remitzDashboardImage,
             tags: ["Fintech", "Money Transfer", "Forex", "React.js", "Tailwind CSS", "Responsive UI", "Payment Flow"],
             demo: "https://www.remitz.in/",
         },
-        {
-            id: 3,
-            title: "Ex2Pay Payment Gateway CRM",
-            description: "Designed and developed responsive web pages using React.js. Integrated payment processing functionalities and optimized website performance. Built reusable and modular components for scalability.",
-            image: exPayLoginImage,
-            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
-            // demo: "https://www.ex2pay.com/crm/jsp/login",
-        },
+        // {
+        //     id: 3,
+        //     title: "Ex2Pay Payment Gateway CRM",
+        //     description: "Designed and developed responsive web pages using React.js. Integrated payment processing functionalities and optimized website performance. Built reusable and modular components for scalability.",
+        //     image: exPayLoginImage,
+        //     tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
+        //     // demo: "https://www.ex2pay.com/crm/jsp/login",
+        // },
         {
             id: 4,
             title: "School Fee Management System (Saral Fee)",

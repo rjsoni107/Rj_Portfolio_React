@@ -7,8 +7,9 @@ import rjElectronicsImage from '../assets/images/rjElectronicsBanner.png';
 import clockImage from '../assets/images/clockImage.png';
 import popupImage from '../assets/images/popUpImage.png';
 import rjSoniPortfolioImage from '../assets/images/RjSoniPortfolioImage.png';
-import chatSyncImage from '../assets/images/chatSyncImage.png';
+import chatterAppImage from '../assets/images/chatterAppImage.png';
 import datePickerImage from '../assets/images/datePickerImage.png';
+import jaraJewellersImage from '../assets/images/jaraJewellersImage.png';
 
 export default function Projects() {
     useEffect(() => {
@@ -18,7 +19,25 @@ export default function Projects() {
     const projects = [
         {
             id: 1,
-            title: 'Modern E-Commerce Electronics Store',
+            title: 'ChatterApp – Cross-Platform Real-Time Chat & Collaboration Suite',
+            description: 'ChatterApp is a high-performance, real-time chat application offering a seamless cross-platform experience across Web (React, Vite, PWA) and Mobile (React Native, Expo). Powered by Appwrite, it features instant WebSocket messaging, live typing indicators, presence tracking (online/offline status), message delivery & read receipts, and client-side compressed media sharing.',
+            image: chatterAppImage,
+            tags: ['React', 'Node.js', 'React Native', 'Expo', 'Appwrite', 'PWA', 'Realtime'],
+            demo: 'https://chatterapp-web.vercel.app/',
+            code: 'https://github.com/rjsoni107/ChatSync_Git_Project',
+        },
+        {
+            id: 2,
+            title: 'JaRa Jewellers – Luxury Fine Jewellery E-Commerce Web Application',
+            description: 'An end-to-end luxury jewellery shopping platform featuring interactive product filtering, real-time cart and wishlist management, multi-step checkout, and fluid animations. Built with a mobile-first PWA architecture for an elegant, ultra-fast retail experience.',
+            image: jaraJewellersImage,
+            tags: [ 'React.js', 'Vite', 'Tailwind CSS', 'Context API', 'JavaScript (ES6+)', 'React Router DOM', 'Responsive UI', 'Mobile-First'],
+            demo: 'https://jara-jewellers.vercel.app/',
+            code: 'https://github.com/rjsoni107/Jewellery_Shopping_Git_Project',
+        },
+        {
+            id: 3,
+            title: 'Rj Electronics – Modern E-Commerce Electronics Store',
             description: 'A fully responsive and visually engaging e-commerce website designed for electronic products. Built using HTML, CSS, and JavaScript with smooth GSAP animations. Features a dynamic product grid, interactive UI, and seamless performance across all devices.',
             image: rjElectronicsImage,
             tags: ['HTML', 'CSS', 'JavaScript', 'Gsap', 'Framer Motion', 'Responsive'],
@@ -26,16 +45,7 @@ export default function Projects() {
             code: 'https://github.com/rjsoni107/rj-electronics',
         },
         {
-            id: 2,
-            title: 'Real-Time Chat & CRM Management System',
-            description: 'A real-time chat application integrated with a CRM system, built for team collaboration and customer management. Includes live messaging, notifications, user presence, and real-time updates using Socket.io. Designed for scalability and smooth user experience.',
-            image: chatSyncImage,
-            tags: ['React', 'MongoDB', 'Node.js', 'Socket.io', 'Realtime'],
-            demo: 'https://chatsync-crm.onrender.com/login',
-            code: 'https://github.com/rjsoni107/CRM_Project_with_NodeJs',
-        },
-        {
-            id: 3,
+            id: 4,
             title: 'Personal Portfolio Website',
             description: 'A personal portfolio website showcasing my projects, skills, and contact details. Designed with modern UI, smooth animations, and a fully responsive layout to deliver a clean and professional online presence.',
             image: rjSoniPortfolioImage,
@@ -44,7 +54,7 @@ export default function Projects() {
             code: 'https://github.com/rjsoni107/rjsoni',
         },
         {
-            id: 4,
+            id: 5,
             title: "Date Range Picker Library",
             description: "A customizable date range picker built in vanilla JavaScript, allowing users to select a date range with ease. This library provides a simple and flexible way to integrate a date range selection feature into your web applications.",
             tags: ["HTML", "CSS", "JavaScript"],
@@ -53,7 +63,7 @@ export default function Projects() {
             code: "https://github.com/rjsoni107/DateRangePicker"
         },
         {
-            id: 5,
+            id: 6,
             title: 'Dynamic Popup Library',
             description: 'A customizable popup management system designed to show animated status messages such as success, error, and confirmation alerts. Built with pure JavaScript, featuring smooth animations and reusable components.',
             tags: ['HTML', 'CSS', 'JavaScript'],
@@ -62,7 +72,7 @@ export default function Projects() {
             code: 'https://github.com/rjsoni107/popup-handler',
         },
         {
-            id: 6,
+            id: 7,
             title: 'Real-Time Analog Clock Application',
             description: 'A real-time analog clock application built with HTML, CSS, and JavaScript. Features smooth animations, a responsive layout, and accurate time display.',
             tags: ['HTML', 'CSS', 'JavaScript'],
