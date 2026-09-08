@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FaBars, FaTimes, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaEnvelope, FaDownload } from 'react-icons/fa';
 import headerLogo from "../assets/images/logo.webp";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
+    const [deferredPrompt, setDeferredPrompt] = useState(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,6 +29,25 @@ const Header = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // PWA install prompt listener
+    useEffect(() => {
+        const handleBeforeInstall = (e) => {
+            e.preventDefault();
+            setDeferredPrompt(e);
+        };
+        window.addEventListener('beforeinstallprompt', handleBeforeInstall);
+        return () => window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+    }, []);
+
+    const handleInstallClick = async () => {
+        if (!deferredPrompt) return;
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+            setDeferredPrompt(null);
+        }
+    };
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -85,8 +105,18 @@ const Header = () => {
                     ))}
                 </nav>
 
-                {/* Desktop CTA */}
-                <div className="hidden lg:flex items-center">
+                {/* Desktop CTA & PWA Install */}
+                <div className="hidden lg:flex items-center gap-3">
+                    {deferredPrompt && (
+                        <button
+                            onClick={handleInstallClick}
+                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 text-cyan-300 font-semibold text-xs transition-all duration-200 hover:scale-105 cursor-pointer"
+                        >
+                            <FaDownload className="text-[10px]" />
+                            <span>Install App</span>
+                        </button>
+                    )}
+
                     <a
                         href="#contact"
                         onClick={(e) => { e.preventDefault(); handleNavClick('contact'); }}
@@ -97,14 +127,26 @@ const Header = () => {
                     </a>
                 </div>
 
-                {/* Mobile Hamburger Toggle */}
-                <button
-                    onClick={toggleMenu}
-                    className="lg:hidden p-2.5 rounded-xl bg-white/5 border border-white/10 text-white z-50 relative focus:outline-none"
-                    aria-label="Toggle Navigation Menu"
-                >
-                    {isMenuOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
-                </button>
+                {/* Mobile Controls */}
+                <div className="lg:hidden flex items-center gap-2 z-50">
+                    {deferredPrompt && (
+                        <button
+                            onClick={handleInstallClick}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 text-xs font-semibold"
+                        >
+                            <FaDownload className="text-[10px]" />
+                            <span>Install</span>
+                        </button>
+                    )}
+
+                    <button
+                        onClick={toggleMenu}
+                        className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none"
+                        aria-label="Toggle Navigation Menu"
+                    >
+                        {isMenuOpen ? <FaTimes className="w-5 h-5" /> : <FaBars className="w-5 h-5" />}
+                    </button>
+                </div>
 
                 {/* Mobile Dropdown Menu */}
                 <AnimatePresence>
@@ -131,6 +173,19 @@ const Header = () => {
                                         {link.label}
                                     </a>
                                 ))}
+
+                                {deferredPrompt && (
+                                    <button
+                                        onClick={() => {
+                                            handleInstallClick();
+                                            setIsMenuOpen(false);
+                                        }}
+                                        className="mt-2 w-full py-2.5 px-4 rounded-xl text-sm font-semibold bg-gradient-to-r from-emerald-500 to-teal-600 text-white flex items-center justify-center gap-2"
+                                    >
+                                        <FaDownload className="text-xs" />
+                                        <span>Install App to Mobile</span>
+                                    </button>
+                                )}
                             </nav>
                         </motion.div>
                     )}
@@ -140,4 +195,5 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Header;
+
