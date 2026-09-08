@@ -53,7 +53,7 @@ function App() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 text-gray-800 font-sans">
+        <div className="min-h-screen bg-[#05070e] text-slate-100 font-sans selection:bg-emerald-500 selection:text-white antialiased">
             <main>
                 <Home />
                 <About />
@@ -75,10 +75,10 @@ function App() {
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={scrollToTop}
-                        className="fixed bottom-8 right-8 w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl flex items-center justify-center z-40 hover:shadow-2xl transition-all duration-300 group"
+                        className="fixed bottom-8 right-8 w-11 h-11 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:shadow-[0_0_30px_rgba(16,185,129,0.7)] flex items-center justify-center z-40 transition-all duration-300 group cursor-pointer border border-emerald-400/40"
                         aria-label="Scroll to top"
                     >
-                        <FaArrowUp className="text-xl group-hover:animate-bounce" />
+                        <FaArrowUp className="text-base group-hover:-translate-y-0.5 transition-transform" />
                     </motion.button>
                 )}
             </AnimatePresence>
@@ -86,4 +86,4 @@ function App() {
     );
 }
 
-export default App
+export default App;

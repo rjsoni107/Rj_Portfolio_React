@@ -1,118 +1,133 @@
 import React from 'react';
-import { FaPhoneAlt, FaDownload } from 'react-icons/fa';
-// import aboutImage from '../assets/images/about.webp';
+import { motion } from 'framer-motion';
+import { FaPhoneAlt, FaDownload, FaCheckCircle, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
 import aboutImage from '../assets/images/about.png';
 import { resumeUrl } from '../assets/js/global';
 
 const About = () => {
+    const highlights = [
+        "4+ Years Fintech & Payment Gateway Experience",
+        "React.js, Modern ES6+, Redux & High-Speed UI",
+        "Scalable CRM & Dashboard Architecture",
+        "Performance Optimization & Reusable Components"
+    ];
+
     return (
         <section
             id="about"
-            className="relative py-24 bg-gradient-to-b from-[#05040a] to-[#071026] text-white overflow-hidden"
+            className="relative py-20 bg-[#05070e] text-white overflow-hidden"
         >
-            {/* Floating neon particles */}
-            <div className="absolute -left-24 -top-24 w-96 h-96 rounded-full bg-gradient-to-br from-emerald-400/20 to-blue-500/10 blur-3xl opacity-80 pointer-events-none" />
-            <div className="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-gradient-to-br from-purple-400/20 to-pink-400/10 blur-3xl opacity-80 pointer-events-none" />
+            {/* Ambient Background Glows */}
+            <div className="absolute -left-28 top-1/4 w-[500px] h-[500px] rounded-full bg-emerald-500/10 blur-[140px] pointer-events-none" />
+            <div className="absolute -right-28 bottom-1/4 w-[500px] h-[500px] rounded-full bg-cyan-500/10 blur-[140px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12">
-                {/* Left Image with 3D parallax */}
-                <div
-                    data-aos="zoom-in"
-                    data-aos-duration="1000"
-                    className="flex-1 flex justify-center perspective-1000 hover:rotate-y-0 hover:rotate-x-0 transform-style-preserve"
-                >
-                    <img
-                        src={aboutImage}
-                        alt="About"
-                        className="rounded-2xl max-w-sm sm:max-w-md lg:max-w-lg object-cover transform transition-transform duration-300 hover:scale-105 h-[434px]"
-                    />
+            {/* Tech grid texture */}
+            <div
+                className="absolute inset-0 opacity-[0.05] pointer-events-none"
+                style={{
+                    backgroundImage: `radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)`,
+                    backgroundSize: "36px 36px",
+                }}
+            />
+
+            <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+                {/* Section Header */}
+                <div className="text-center mb-16" data-aos="fade-up">
+                    <span className="text-xs sm:text-sm font-semibold tracking-widest text-emerald-400 uppercase font-mono px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30">
+                        Get To Know Me
+                    </span>
+                    <h2 className="text-3xl sm:text-5xl font-extrabold mt-4 tracking-tight">
+                        <span className="text-slate-200">About</span> <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400">Myself</span>
+                    </h2>
                 </div>
 
-                {/* Right Glass Card */}
-                <div
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
-                    className="relative flex-1 bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300"
-                >
-                    <h2 className="text-3xl sm:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400">
-                        About <span className="text-white">Myself</span>
-                    </h2>
-                    <p className="text-gray-300 text-md leading-relaxed first-letter:text-4xl first-letter:font-bold first-letter:text-emerald-400">
-                        Passionate Front-End Developer with 4 years of experience in a Payment Gateway company, specialising in Web Development and optimising landing pages. Proficient in ReactJS, HTML, CSS, JavaScript and jQuery. Throughout my career, I have prioritised creating scalable and well-documented code. I enjoy working collaboratively, but can also run projects independently.
-                    </p>
-                    <p className="text-gray-300 text-md leading-relaxed">
-                        At Letzpay Solution Private Limited, I've contributed significantly to web development projects, collaborating with design and back-end teams to create reusable code and ensure smooth functionality. My skills also extend to API integration, Bootstrap, and responsive web design.
-                    </p>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    {/* Left: Framed Image Showcase */}
+                    <div
+                        data-aos="fade-right"
+                        className="lg:col-span-5 flex justify-center"
+                    >
+                        <div className="relative group w-full max-w-[380px]">
+                            {/* Ambient Aura */}
+                            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-emerald-500/30 to-cyan-500/30 blur-2xl -z-10 group-hover:scale-105 transition-transform duration-500" />
+                            
+                            {/* Border Ring */}
+                            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-b from-emerald-500/40 via-cyan-500/20 to-transparent p-[1px] blur-[0.5px]" />
 
-                    {/* CTA Buttons */}
-
-                    <div className="flex flex-wrap gap-4 pt-4 justify-center">
-                        {/* Contact Me */}
-                        <a
-                            href="#contact"
-                            className="
-                                relative inline-flex items-center gap-2
-                                rounded-full border-0
-                                px-6 py-3 md:px-12
-                                font-semibold text-base
-                                text-white
-                                bg-[#005693]
-                                shadow-md
-                                outline-none
-                                select-none
-                                transition-all duration-300
-                                hover:scale-110 hover:shadow-xl
-                                hover:text-white
-                                before:content-['']
-                                before:absolute before:top-0 before:left-[4%]
-                                before:h-1/2 before:w-[92%]
-                                before:rounded-full
-                                before:bg-gradient-to-b
-                                before:from-white/80 before:to-white/0
-                                before:opacity-50
-                                before:transition-all before:duration-300
-                                "
-                        >
-                            <FaPhoneAlt className="text-lg" />
-                            Contact Me
-                        </a>
-
-                        {/* Download CV */}
-                        <a
-                            href={resumeUrl}
-                            download
-                            target="_blank"
-                            className="
-                                relative inline-flex items-center gap-2
-                                rounded-full border-0
-                                px-6 py-3 md:px-12
-                                font-semibold text-base
-                                text-white
-                                bg-emerald-700
-                                shadow-md
-                                outline-none
-                                select-none
-                                transition-all duration-300
-                                hover:scale-110 hover:shadow-xl
-                                hover:text-white
-                                before:content-['']
-                                before:absolute before:top-0 before:left-[4%]
-                                before:h-1/2 before:w-[92%]
-                                before:rounded-full
-                                before:bg-gradient-to-b
-                                before:from-white/80 before:to-white/0
-                                before:opacity-50
-                                before:transition-all before:duration-300
-                                "
-                        >
-                            <FaDownload className="text-lg" />
-                            Download CV
-                        </a>
+                            {/* Image Container */}
+                            <div className="relative rounded-[2.5rem] bg-gradient-to-b from-white/[0.08] to-white/[0.02] border border-white/10 backdrop-blur-xl p-4 shadow-2xl overflow-hidden">
+                                <img
+                                    src={aboutImage}
+                                    alt="Kuldeep Raj Soni - About"
+                                    className="rounded-3xl w-full h-[400px] object-cover object-top drop-shadow-lg transition-transform duration-500 group-hover:scale-[1.02]"
+                                />
+                                
+                                {/* Floating mini highlight badge */}
+                                <div className="absolute bottom-6 left-6 right-6 p-3.5 rounded-2xl bg-[#091124]/90 border border-emerald-500/30 backdrop-blur-md flex items-center gap-3 shadow-lg">
+                                    <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-base">
+                                        <FaBriefcase />
+                                    </div>
+                                    <div>
+                                        <p className="text-[11px] text-slate-400 font-mono">Software Engineer (Frontend)</p>
+                                        <p className="text-xs font-bold text-white">Letzpay Solution Pvt Ltd</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
+                    {/* Right: Bio & Highlights Card */}
+                    <div
+                        data-aos="fade-left"
+                        className="lg:col-span-7 bg-white/[0.03] border border-white/10 backdrop-blur-xl rounded-[2.5rem] p-8 sm:p-10 shadow-2xl relative hover:border-emerald-500/30 transition-all duration-300"
+                    >
+                        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                            Passionate Front-End Engineer & <span className="text-emerald-400">Fintech Specialist</span>
+                        </h3>
+                        
+                        <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                            With over <span className="text-white font-semibold">4 years of experience</span> in a high-volume Payment Gateway company, I specialize in crafting high-speed, scalable web applications and modular dashboards. Proficient in <span className="text-emerald-300 font-medium">ReactJS, modern JavaScript, Tailwind CSS, Redux, and REST API integration</span>.
+                        </p>
+                        
+                        <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                            At Letzpay Solution, I spearhead front-end architecture for multi-tier CRM systems, payout solutions, and transaction routing modules. I take pride in writing clean, reusable, and well-documented code that delivers silky-smooth user experiences.
+                        </p>
 
-                    {/* Neon glow border pulse */}
-                    <div className="absolute inset-0 rounded-3xl border border-emerald-400/20 pointer-events-none animate-pulse-slow"></div>
+                        {/* Bullet Highlights */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                            {highlights.map((item, idx) => (
+                                <div key={idx} className="flex items-start gap-2.5">
+                                    <FaCheckCircle className="text-emerald-400 text-base mt-0.5 shrink-0" />
+                                    <span className="text-xs sm:text-sm text-slate-200 font-medium">{item}</span>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* CTAs */}
+                        <div className="flex flex-wrap gap-4 pt-2">
+                            {/* Download CV */}
+                            <a
+                                href={resumeUrl}
+                                download
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.35)] hover:shadow-[0_0_30px_rgba(16,185,129,0.55)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] overflow-hidden"
+                            >
+                                <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                                <FaDownload className="text-sm transition-transform duration-300 group-hover:-translate-y-0.5" />
+                                <span className="relative z-10">Download CV</span>
+                            </a>
+
+                            {/* Contact Me */}
+                            <a
+                                href="#contact"
+                                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 hover:border-emerald-400/50 text-white font-medium text-sm sm:text-base backdrop-blur-md transition-all duration-300 hover:scale-[1.02]"
+                            >
+                                <FaPhoneAlt className="text-sm text-emerald-400" />
+                                <span>Get In Touch</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -120,3 +135,4 @@ const About = () => {
 };
 
 export default About;
+
