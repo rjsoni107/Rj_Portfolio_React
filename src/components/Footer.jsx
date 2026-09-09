@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp, FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import headerLogo from "../assets/images/logo.png";
 import '../css/footer.css';
 
@@ -44,7 +44,10 @@ const Footer = () => {
             ),
             url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm"
         },
-
+        {
+            icon: <FaWhatsapp color="#25D366" size={25} />,
+            url: "https://wa.me/919524000107"
+        },
         {
             icon: <FaFacebook color="#559fff" size={25} />,
             url: "https://www.facebook.com/share/1BVBcybbH7/"

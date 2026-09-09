@@ -48,7 +48,7 @@ export default function Contact() {
             icon: <FaPhoneAlt className="text-cyan-400" />,
             title: "Phone / WhatsApp",
             text: "+91 9524000107",
-            link: "tel:+919524000107"
+            link: "https://wa.me/919524000107"
         },
         {
             icon: <FaMapMarkerAlt className="text-teal-400" />,

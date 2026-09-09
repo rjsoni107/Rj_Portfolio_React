@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaDownload, FaGithub, FaLinkedin, FaInstagram, FaArrowRight, FaCode, FaBolt, FaShieldAlt } from "react-icons/fa";
+import { FaDownload, FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaArrowRight, FaCode, FaBolt, FaShieldAlt } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import heroImg from "../assets/images/raj.webp";
 import { resumeUrl } from "../assets/js/global";
@@ -28,19 +28,48 @@ const Home = () => {
 
     const socialLinks = [
         {
-            icon: <FaGithub size={18} />,
+            icon: <FaGithub color="#ffffff" size={20} />,
             url: "https://github.com/rjsoni107",
             label: "GitHub",
+            hoverBorder: "hover:border-white/50",
+            glow: "hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]",
         },
         {
-            icon: <FaLinkedin size={18} />,
+            icon: <FaLinkedin color="#0A66C2" size={20} />,
             url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246",
             label: "LinkedIn",
+            hoverBorder: "hover:border-[#0A66C2]/60",
+            glow: "hover:shadow-[0_0_15px_rgba(10,102,194,0.4)]",
         },
         {
-            icon: <FaInstagram size={18} />,
+            icon: (
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                    <defs>
+                        <linearGradient id="homeInstaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#fdf497" />
+                            <stop offset="5%" stopColor="#fdf497" />
+                            <stop offset="45%" stopColor="#fd5949" />
+                            <stop offset="60%" stopColor="#d6249f" />
+                            <stop offset="90%" stopColor="#285AEB" />
+                        </linearGradient>
+                    </defs>
+                    <path
+                        fill="url(#homeInstaGradient)"
+                        d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"
+                    />
+                </svg>
+            ),
             url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm",
             label: "Instagram",
+            hoverBorder: "hover:border-[#d6249f]/60",
+            glow: "hover:shadow-[0_0_15px_rgba(214,36,159,0.4)]",
+        },
+        {
+            icon: <FaWhatsapp color="#25D366" size={20} />,
+            url: "https://wa.me/919524000107",
+            label: "WhatsApp",
+            hoverBorder: "hover:border-[#25D366]/60",
+            glow: "hover:shadow-[0_0_15px_rgba(37,211,102,0.4)]",
         },
     ];
 
@@ -303,7 +332,7 @@ const Home = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label={item.label}
-                                        className="p-3 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-emerald-400 hover:border-emerald-500/50 hover:bg-white/10 transition-all duration-300 hover:scale-110 shadow-sm"
+                                        className={`p-2.5 sm:p-3 rounded-full bg-white/[0.05] border border-white/10 ${item.hoverBorder} ${item.glow} hover:bg-white/10 transition-all duration-300 hover:scale-110 shadow-sm flex items-center justify-center`}
                                     >
                                         {item.icon}
                                     </a>
