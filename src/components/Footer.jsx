@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaArrowUp, FaFacebook, FaInstagram } from 'react-icons/fa';
-import headerLogo from "../assets/images/logo.webp";
+import headerLogo from "../assets/images/logo.png";
 import '../css/footer.css';
 
 const Footer = () => {

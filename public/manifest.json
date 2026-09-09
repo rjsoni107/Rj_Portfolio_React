@@ -1,8 +1,8 @@
 {
-  "name": "Kuldeep Soni (Raj) - Frontend Engineer Portfolio",
-  "short_name": "Raj Soni",
+  "name": "Raj Soni - Frontend Engineer Portfolio",
+  "short_name": "Rj Soni",
   "id": "/",
-  "description": "Portfolio of Kuldeep Soni (Raj) - Frontend Engineer specializing in Fintech, React, and High-Speed Web Applications.",
+  "description": "Portfolio of Raj Soni - Frontend Engineer specializing in Fintech, React, and High-Speed Web Applications.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -12,31 +12,25 @@
   "categories": ["portfolio", "developer", "productivity"],
   "icons": [
     {
-      "src": "/pwa-192x192.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/pwa-192x192.png",
+      "src": "/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/pwa-512x512.png",
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/pwa-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/maskable-icon-512x512.png",
+      "src": "/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

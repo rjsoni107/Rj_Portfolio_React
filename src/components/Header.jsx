@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FaBars, FaTimes, FaEnvelope, FaDownload } from 'react-icons/fa';
-import headerLogo from "../assets/images/logo.webp";
+import headerLogo from "../assets/images/logo.png";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -196,4 +196,4 @@ const Header = () => {
 };
 
 export default Header;
-
+
