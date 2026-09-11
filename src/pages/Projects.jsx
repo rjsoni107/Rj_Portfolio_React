@@ -41,7 +41,7 @@ export default function Projects() {
         {
             id: 3,
             title: 'AppointerHub – Full-Stack Appointment Scheduling & CRM Platform',
-            description: 'AppointerHub is a full-stack, scalable CRM and appointment management platform designed to streamline client bookings, provider schedules, and lead pipelines. Built with React, Node.js, MongoDB, and Socket.io, it offers real-time notifications, interactive analytics, and multi-role access control.',
+            description: 'AppointerHub is a full-stack, scalable CRM and appointment management platform designed to streamline client bookings, provider schedules, and lead pipelines. Built with React, Node.js, MongoDB.',
             image: appointerHubImage,
             tags: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'MongoDB', 'Node.js', 'Responsive UI'],
             demo: 'https://appointerhub.vercel.app/',
