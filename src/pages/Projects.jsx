@@ -116,49 +116,48 @@ export default function Projects() {
                 </div>
 
                 {/* Projects Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-stretch">
                     {projects.map((project, idx) => (
                         <div
                             key={project.id}
                             data-aos="fade-up"
                             data-aos-delay={idx * 70}
-                            className="group relative rounded-3xl bg-white/[0.03] hover:bg-white/[0.06] border-2 border-emerald-500/40 hover:border-emerald-500 backdrop-blur-xl shadow-xl hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden hover:-translate-y-2"
+                            className="group relative rounded-3xl bg-white/[0.03] hover:bg-white/[0.06] border border-emerald-500/30 hover:border-emerald-400 backdrop-blur-xl shadow-xl hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden hover:-translate-y-1.5"
                         >
                             {/* Card Media Preview Container */}
-                            <div className="relative h-52 w-full overflow-hidden bg-[#0a1122]">
+                            <div className="relative aspect-[20/10] w-full overflow-hidden bg-[#090e1a] border-b border-white/10 p-2 flex items-center justify-center group-hover:bg-[#0c1324] transition-colors duration-300">
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                    className="w-full object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-md"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#05070e] via-transparent to-black/20 opacity-30" />
 
                                 {project.featured && (
-                                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-emerald-500/90 text-white font-mono text-[10px] font-bold tracking-wide shadow-md backdrop-blur-md">
+                                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-emerald-500/90 text-white font-mono text-[10px] font-bold tracking-wide shadow-md backdrop-blur-md z-10">
                                         FEATURED
                                     </span>
                                 )}
                             </div>
 
                             {/* Card Body */}
-                            <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
+                            <div className="p-5 flex flex-col justify-between flex-1">
                                 <div>
-                                    <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-emerald-300 transition-colors mb-2.5 line-clamp-2">
+                                    <h3 className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors mb-2 line-clamp-2">
                                         {project.title}
                                     </h3>
-                                    
-                                    <p className="text-slate-300/90 text-xs sm:text-sm leading-relaxed mb-5">
+
+                                    <p className="text-slate-300/90 text-xs leading-relaxed mb-4 line-clamp-3">
                                         {project.description}
                                     </p>
                                 </div>
 
                                 <div>
                                     {/* Tech Tags */}
-                                    <div className="flex flex-wrap gap-1.5 mb-6 pt-3 border-t border-white/5">
+                                    <div className="flex flex-wrap gap-1.5 mb-5 pt-3 border-t border-white/5">
                                         {project.tags.map((tag, i) => (
                                             <span
                                                 key={i}
-                                                className="text-[11px] font-mono px-2.5 py-1 rounded-lg bg-white/[0.04] text-slate-300 border border-white/5 font-medium"
+                                                className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white/[0.04] text-slate-300 border border-white/5"
                                             >
                                                 {tag}
                                             </span>
@@ -166,13 +165,13 @@ export default function Projects() {
                                     </div>
 
                                     {/* Action Links */}
-                                    <div className="flex items-center gap-3">
+                                    <div className="flex items-center gap-2.5">
                                         {project.demo && (
                                             <a
                                                 href={project.demo}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-xs sm:text-sm shadow-md hover:shadow-[0_0_18px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-[1.02]"
+                                                className="flex-1 inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-xs shadow-md hover:shadow-[0_0_18px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-[1.02]"
                                             >
                                                 <FaExternalLinkAlt className="text-xs" />
                                                 <span>Live Demo</span>
@@ -184,10 +183,10 @@ export default function Projects() {
                                                 href={project.code}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-white/30 text-white font-medium text-xs sm:text-sm transition-all duration-300 hover:scale-[1.02]"
+                                                className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-white/30 text-white font-medium text-xs transition-all duration-300 hover:scale-[1.02]"
                                                 aria-label="View Code on GitHub"
                                             >
-                                                <FaGithub className="text-sm" />
+                                                <FaGithub className="text-xs" />
                                                 <span>Code</span>
                                             </a>
                                         )}

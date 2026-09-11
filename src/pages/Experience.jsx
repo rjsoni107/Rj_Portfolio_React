@@ -82,206 +82,82 @@ export default function Experience() {
         },
     ];
 
-    // const keyProjects = [
-    //     {
-    //         id: 1,
-    //         title: "Letzpe Payment Gateway CRM",
-    //         description: "Enterprise CRM system for merchant transactions, nodal transfers, settlement tracking, and multi-tier user permissions.",
-    //         image: letzpeDashboardImage,
-    //         tags: ["React.js", "Payment Gateway", "CRM", "JavaScript", "REST APIs"],
-    //         demo: "https://www.letzpe.com/crm/jsp/index",
-    //     },
-    //     {
-    //         id: 2,
-    //         title: "BSKSM – Multi-Tier E-Governance CRM & Public Works System",
-    //         description: "Government of Jharkhand — 5-Tier Administrative Dashboard Built a bilingual, data-driven hierarchical dashboard covering State, District, Block, Panchayat, and Mukhiya levels, with granular analytics and role-based insights for efficient governance and monitoring.",
-    //         image: birsaImage,
-    //         tags: ['React.js', 'Redux Toolkit', 'MUI', 'REST APIs', 'i18next'],
-    //     },
-    //     {
-    //         id: 3,
-    //         title: "Remitz – International Money Transfer & Forex Platform",
-    //         description: "Cross-border payment platform with live forex currency conversion, clean KYC flow, and lightning-fast transaction checkouts.",
-    //         image: remitzDashboardImage,
-    //         tags: ["Fintech", "Forex", "React.js", "Tailwind CSS", "Responsive UI"],
-    //         demo: "https://www.remitz.in/",
-    //     },
-    //     {
-    //         id: 4,
-    //         title: "School Fee Management System (Saral Fee)",
-    //         description: "Automated fee collection and reconciliation portal with multi-role dashboards for admins, teachers, and parents.",
-    //         image: schoolDashboardImage,
-    //         tags: ["JavaScript", "Payments", "Role Management", "Bootstrap"],
-    //     },
-    //     {
-    //         id: 5,
-    //         title: "Domestic Money Transfer (DMT) Engine",
-    //         description: "High-security domestic remittance module with instant beneficiary validation and real-time transaction receipts.",
-    //         image: dmtDashboardImage,
-    //         tags: ["Payment Gateway", "CRM", "Transactions", "Fintech"],
-    //     },
-    //     {
-    //         id: 6,
-    //         title: "Fanoz Admin Dashboard – Deposit & Payout System",
-    //         description: "Fintech analytics dashboard with interactive revenue charts, transaction filters, and automated invoice generators.",
-    //         image: fanozDashboardImage,
-    //         tags: ["React", "Analytics", "CRM", "Payment System"],
-    //     },
-    //     {
-    //         id: 3,
-    //         title: "Ex2Pay Payment Gateway CRM",
-    //         description: "Designed and developed responsive web pages using React.js. Integrated payment processing functionalities and optimized website performance. Built reusable and modular components for scalability.",
-    //         image: exPayLoginImage,
-    //         tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
-    //         // demo: "https://www.ex2pay.com/crm/jsp/login",
-    //     },
-    // ];
+    const keyProjects = [
+        {
+            id: 1,
+            title: "Letzpe Payment Gateway CRM",
+            description:
+                "Enterprise-grade CRM platform designed to manage merchant transactions, nodal transfers, settlement tracking, and multi-level user access with secure and efficient payment operations.",
+            image: letzpeDashboardImage,
+            tags: ["React.js", "Payment Gateway", "CRM", "JavaScript", "REST APIs"],
+            demo: "https://www.letzpe.com/crm/jsp/index",
+        },
 
-//     const keyProjects = [
-//     {
-//         id: 1,
-//         title: "Letzpe Payment Gateway CRM",
-//         description:
-//             "Enterprise-grade CRM for managing merchant transactions, nodal transfers, settlements, and multi-level user permissions with streamlined payment operations.",
-//         image: letzpeDashboardImage,
-//         tags: ["React.js", "Payment Gateway", "CRM", "JavaScript", "REST APIs"],
-//         demo: "https://www.letzpe.com/crm/jsp/index",
-//     },
+        {
+            id: 2,
+            title: "BSKSM – Multi-Tier E-Governance (ERP) Portal & Public Works System",
+            description:
+                "Bilingual 5-tier e-governance platform for the Government of Jharkhand, covering State, District, Block, Panchayat, and Mukhiya levels with granular analytics and role-based access.",
+            image: birsaImage,
+            tags: ["React.js", "Redux Toolkit", "MUI", "REST APIs", "i18next"],
+        },
 
-//     {
-//         id: 2,
-//         title: "BSKSM – Multi-Tier E-Governance CRM & Public Works System",
-//         description:
-//             "Government of Jharkhand’s bilingual 5-tier e-governance platform covering State, District, Block, Panchayat, and Mukhiya levels, with granular analytics, role-based access, and data-driven monitoring.",
-//         image: birsaImage,
-//         tags: ["React.js", "Redux Toolkit", "MUI", "REST APIs", "i18next"],
-//     },
+        {
+            id: 3,
+            title: "Letzpe Bridge – Digital Remittance Management Platform",
+            description:
+                "Letzpe Bridge is a modern React-based remittance management platform for secure money transfers from Australia to India, China, and the Philippines, featuring KYC verification, beneficiary management, exchange rates, transaction tracking, and reporting.",
+            image: letzpeBridgeImage,
+            tags: ["Fintech", "Forex", "React.js", "Tailwind CSS", "Responsive UI"],
+            demo: "https://www.remitz.in/",
+        },
 
-//     {
-//         id: 3,
-//         title: "Remitz – International Money Transfer & Forex Platform",
-//         description:
-//             "Cross-border money transfer platform featuring live forex conversion, streamlined KYC workflows, beneficiary management, and fast, secure transaction processing.",
-//         image: remitzDashboardImage,
-//         tags: ["Fintech", "Forex", "React.js", "Tailwind CSS", "Responsive UI"],
-//         demo: "https://www.remitz.in/",
-//     },
+        {
+            id: 4,
+            title: "School Fee Management System (Saral Fee)",
+            description:
+                "School fee management platform for automated fee collection, payment reconciliation, and multi-role access for administrators, teachers, and parents.",
+            image: schoolDashboardImage,
+            tags: ["JavaScript", "Payments", "Role Management", "Bootstrap"],
+        },
 
-//     {
-//         id: 4,
-//         title: "School Fee Management System (Saral Fee)",
-//         description:
-//             "Digital fee management platform for schools with automated fee collection, payment reconciliation, and dedicated dashboards for administrators, teachers, and parents.",
-//         image: schoolDashboardImage,
-//         tags: ["JavaScript", "Payments", "Role Management", "Bootstrap"],
-//     },
+        {
+            id: 5,
+            title: "Domestic Money Transfer (DMT) Engine",
+            description:
+                "Domestic remittance platform with beneficiary validation, transaction processing, real-time status tracking, and automated transaction receipts.",
+            image: dmtDashboardImage,
+            tags: ["Payment Gateway", "CRM", "Transactions", "Fintech"],
+        },
 
-//     {
-//         id: 5,
-//         title: "Domestic Money Transfer (DMT) Engine",
-//         description:
-//             "Secure domestic remittance system supporting instant beneficiary validation, transaction processing, real-time status tracking, and automated transaction receipts.",
-//         image: dmtDashboardImage,
-//         tags: ["Payment Gateway", "CRM", "Transactions", "Fintech"],
-//     },
+        {
+            id: 6,
+            title: "Remitz – International Money Transfer & Forex Platform",
+            description:
+                "Cross-border money transfer platform with live forex conversion, streamlined KYC workflows, and fast, secure transaction processing.",
+            image: remitzDashboardImage,
+            tags: ["Fintech", "Forex", "React.js", "Tailwind CSS", "Responsive UI"],
+            demo: "https://www.remitz.in/",
+        },
+        {
+            id: 7,
+            title: "Fanoz Admin Dashboard – Deposit & Payout System",
+            description:
+                "Fintech admin dashboard featuring transaction analytics, interactive revenue charts, advanced filtering, and automated invoice generation.",
+            image: fanozDashboardImage,
+            tags: ["React", "Analytics", "CRM", "Payment System"],
+        },
 
-//     {
-//         id: 6,
-//         title: "Fanoz Admin Dashboard – Deposit & Payout System",
-//         description:
-//             "Fintech administration dashboard with real-time transaction insights, interactive revenue analytics, advanced filtering, and automated invoice generation.",
-//         image: fanozDashboardImage,
-//         tags: ["React", "Analytics", "CRM", "Payment System"],
-//     },
-
-//     {
-//         id: 7,
-//         title: "Ex2Pay Payment Gateway CRM",
-//         description:
-//             "Responsive payment gateway CRM built with reusable React components, integrated payment processing workflows, and performance-focused UI architecture for scalable web applications.",
-//         image: exPayLoginImage,
-//         tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
-//         // demo: "https://www.ex2pay.com/crm/jsp/login",
-//     },
-// ];
-
-
-const keyProjects = [
-    {
-        id: 1,
-        title: "Letzpe Payment Gateway CRM",
-        description:
-            "Enterprise-grade CRM platform designed to manage merchant transactions, nodal transfers, settlement tracking, and multi-level user access with secure and efficient payment operations.",
-        image: letzpeDashboardImage,
-        tags: ["React.js", "Payment Gateway", "CRM", "JavaScript", "REST APIs"],
-        demo: "https://www.letzpe.com/crm/jsp/index",
-    },
-
-    {
-        id: 2,
-        title: "BSKSM – Multi-Tier E-Governance (ERP) Portal & Public Works System",
-        description:
-            "Bilingual 5-tier e-governance platform for the Government of Jharkhand, covering State, District, Block, Panchayat, and Mukhiya levels with granular analytics and role-based access.",
-        image: birsaImage,
-        tags: ["React.js", "Redux Toolkit", "MUI", "REST APIs", "i18next"],
-    },
-
-    {
-        id: 3,
-        title: "Letzpe Bridge – Digital Remittance Management Platform",
-        description:
-            "Letzpe Bridge is a modern React-based remittance management platform for secure money transfers from Australia to India, China, and the Philippines, featuring KYC verification, beneficiary management, exchange rates, transaction tracking, and reporting.",
-        image: letzpeBridgeImage,
-        tags: ["Fintech", "Forex", "React.js", "Tailwind CSS", "Responsive UI"],
-        demo: "https://www.remitz.in/",
-    },
-
-    {
-        id: 4,
-        title: "School Fee Management System (Saral Fee)",
-        description:
-            "School fee management platform for automated fee collection, payment reconciliation, and multi-role access for administrators, teachers, and parents.",
-        image: schoolDashboardImage,
-        tags: ["JavaScript", "Payments", "Role Management", "Bootstrap"],
-    },
-
-    {
-        id: 5,
-        title: "Domestic Money Transfer (DMT) Engine",
-        description:
-            "Domestic remittance platform with beneficiary validation, transaction processing, real-time status tracking, and automated transaction receipts.",
-        image: dmtDashboardImage,
-        tags: ["Payment Gateway", "CRM", "Transactions", "Fintech"],
-    },
-
-    {
-        id: 6,
-        title: "Remitz – International Money Transfer & Forex Platform",
-        description:
-            "Cross-border money transfer platform with live forex conversion, streamlined KYC workflows, and fast, secure transaction processing.",
-        image: remitzDashboardImage,
-        tags: ["Fintech", "Forex", "React.js", "Tailwind CSS", "Responsive UI"],
-        demo: "https://www.remitz.in/",
-    }, 
-    {
-        id: 7,
-        title: "Fanoz Admin Dashboard – Deposit & Payout System",
-        description:
-            "Fintech admin dashboard featuring transaction analytics, interactive revenue charts, advanced filtering, and automated invoice generation.",
-        image: fanozDashboardImage,
-        tags: ["React", "Analytics", "CRM", "Payment System"],
-    },
-
-    {
-        id: 8,
-        title: "Ex2Pay Payment Gateway CRM",
-        description:
-            "Responsive payment gateway CRM with integrated payment processing, reusable UI components, and performance-optimized web pages.",
-        image: exPayLoginImage,
-        tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
-        // demo: "https://www.ex2pay.com/crm/jsp/login",
-    },
-];
+        {
+            id: 8,
+            title: "Ex2Pay Payment Gateway CRM",
+            description:
+                "Responsive payment gateway CRM with integrated payment processing, reusable UI components, and performance-optimized web pages.",
+            image: exPayLoginImage,
+            tags: ["HTML", "CSS", "JavaScript", "jQuery", "Payment Gateway", "CRM"],
+            // demo: "https://www.ex2pay.com/crm/jsp/login",
+        },
+    ];
     return (
         <section id="experience" className="relative py-20 bg-[#05070e] text-white overflow-hidden">
             {/* Ambient Lights */}
@@ -442,27 +318,26 @@ const keyProjects = [
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.4 }}
-                            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8"
+                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
                         >
                             {keyProjects.map((project) => (
                                 <div
                                     key={project.id}
-                                    className="group rounded-3xl bg-white/[0.03] hover:bg-white/[0.06] border-2 border-emerald-500/40 hover:border-emerald-500 overflow-hidden backdrop-blur-xl shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-2"
+                                    className="group rounded-3xl bg-white/[0.03] hover:bg-white/[0.06] border border-emerald-500/30 hover:border-emerald-400 overflow-hidden backdrop-blur-xl shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1.5"
                                 >
-                                    <div className="relative h-48 overflow-hidden bg-black/40">
+                                    <div className="relative aspect-[20/10] w-full overflow-hidden bg-[#090e1a] border-b border-white/10 p-2 flex items-center justify-center group-hover:bg-[#0c1324] transition-colors duration-300">
                                         <img
                                             src={project.image}
                                             alt={project.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                            className="w-full object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-md"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-[#05070e] via-transparent to-transparent opacity-80" />
 
                                         {project.demo && (
                                             <a
                                                 href={project.demo}
                                                 target="_blank"
                                                 rel="noreferrer"
-                                                className="absolute top-3 right-3 p-2.5 rounded-full bg-black/70 border border-white/20 text-white hover:text-emerald-400 hover:border-emerald-400 backdrop-blur-md transition-all duration-200"
+                                                className="absolute top-3 right-3 p-2 rounded-full bg-black/75 border border-white/20 text-white hover:text-emerald-400 hover:border-emerald-400 backdrop-blur-md transition-all duration-200 shadow-lg z-10"
                                                 aria-label="View Demo"
                                             >
                                                 <FaExternalLinkAlt className="text-xs" />
@@ -470,12 +345,12 @@ const keyProjects = [
                                         )}
                                     </div>
 
-                                    <div className="p-6 flex flex-col justify-between flex-1">
+                                    <div className="p-5 flex flex-col justify-between flex-1">
                                         <div>
-                                            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                                            <h3 className="text-base font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors line-clamp-2">
                                                 {project.title}
                                             </h3>
-                                            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                            <p className="text-slate-300 text-xs leading-relaxed mb-4 line-clamp-3">
                                                 {project.description}
                                             </p>
                                         </div>

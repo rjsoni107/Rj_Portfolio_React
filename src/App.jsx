@@ -46,7 +46,7 @@ function App() {
         AOS.init({
             duration: 1000, // animation duration
             easing: "ease-in-out", // smoother easing
-            once: false, // trigger only once
+            once: true, // trigger only once
             offset: window.innerWidth < 768 ? 100 : 80,
         });
 
