@@ -10,6 +10,7 @@ import rjSoniPortfolioImage from '../assets/images/RjSoniPortfolioImage.png';
 import chatterAppImage from '../assets/images/chatterAppImage.png';
 import datePickerImage from '../assets/images/datePickerImage.png';
 import jaraJewellersImage from '../assets/images/jaraJewellersImage.png';
+import appointerHubImage from '../assets/images/appointerHubImage.png';
 
 export default function Projects() {
     useEffect(() => {
@@ -22,9 +23,9 @@ export default function Projects() {
             title: 'ChatterApp – Real-Time Collaboration Suite',
             description: 'Cross-platform real-time chat application with instant WebSockets, live typing indicators, online presence tracking, message read receipts, and client-side media compression.',
             image: chatterAppImage,
-            tags: ['React', 'Node.js', 'React Native', 'Expo', 'Appwrite', 'PWA'],
+            tags: ['React', 'Node.js', 'React Native', 'Expo', 'Appwrite', 'PWA', 'Mobile App'],
             demo: 'https://chatterapp-web.vercel.app/',
-            code: 'https://github.com/rjsoni107/ChatSync_Git_Project',
+            // code: 'https://github.com/rjsoni107/ChatSync_Git_Project',
             featured: true,
         },
         {
@@ -32,31 +33,41 @@ export default function Projects() {
             title: 'JaRa Jewellers – Luxury E-Commerce Web App',
             description: 'Luxury fine jewellery shopping portal featuring interactive product filtering, instant cart/wishlist state management, multi-step checkout, and silky-smooth micro-animations.',
             image: jaraJewellersImage,
-            tags: ['React.js', 'Vite', 'Tailwind CSS', 'Context API', 'PWA'],
+            tags: ['React.js', 'Vite', 'Tailwind CSS', 'Context API', 'PWA', 'Mobile View'],
             demo: 'https://jara-jewellers.vercel.app/',
-            code: 'https://github.com/rjsoni107/Jewellery_Shopping_Git_Project',
+            // code: 'https://github.com/rjsoni107/Jewellery_Shopping_Git_Project',
             featured: true,
         },
         {
             id: 3,
+            title: 'AppointerHub – Full-Stack Appointment Scheduling & CRM Platform',
+            description: 'AppointerHub is a full-stack, scalable CRM and appointment management platform designed to streamline client bookings, provider schedules, and lead pipelines. Built with React, Node.js, MongoDB, and Socket.io, it offers real-time notifications, interactive analytics, and multi-role access control.',
+            image: appointerHubImage,
+            tags: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'MongoDB', 'Node.js', 'Responsive UI'],
+            demo: 'https://appointerhub.vercel.app/',
+            // code: 'https://github.com/rjsoni107/Jewellery_Shopping_Git_Project',
+            featured: true,
+        },
+        {
+            id: 4,
             title: 'Rj Electronics – Modern Electronics Store',
             description: 'High-speed e-commerce frontend designed for gadget showcases. Built with dynamic product galleries, responsive cart flows, and GSAP smooth scroll animations.',
             image: rjElectronicsImage,
             tags: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Responsive UI'],
             demo: 'https://rj-electronics.vercel.app/',
-            code: 'https://github.com/rjsoni107/rj-electronics',
+            // code: 'https://github.com/rjsoni107/rj-electronics',
         },
         {
-            id: 4,
+            id: 5,
             title: 'Personal Portfolio Web Experience',
             description: 'Modern developer portfolio showcasing interactive UI engineering, clean architecture, responsive components, and fluid animations.',
             image: rjSoniPortfolioImage,
             tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
             demo: 'https://rjsoni.vercel.app/',
-            code: 'https://github.com/rjsoni107/rjsoni',
+            // code: 'https://github.com/rjsoni107/rjsoni',
         },
         {
-            id: 5,
+            id: 6,
             title: "Date Range Picker Library",
             description: "Customizable zero-dependency date range picker built in vanilla JavaScript. Supports custom date formats, predefined presets, and easy plug-and-play integration.",
             image: datePickerImage,
@@ -65,7 +76,7 @@ export default function Projects() {
             code: "https://github.com/rjsoni107/DateRangePicker"
         },
         {
-            id: 6,
+            id: 7,
             title: 'Dynamic Popup & Modal Handler',
             description: 'Lightweight animated notification and modal management library for web applications with customizable status themes, alerts, and smooth CSS transitions.',
             image: popupImage,
@@ -74,7 +85,7 @@ export default function Projects() {
             code: 'https://github.com/rjsoni107/popup-handler',
         },
         {
-            id: 7,
+            id: 8,
             title: 'Real-Time Analog & Digital Clock Engine',
             description: 'Interactive real-time clock application with smooth SVG sweep second hands, time zone detection, and responsive dark glass aesthetic.',
             image: clockImage,
