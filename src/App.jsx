@@ -14,8 +14,6 @@ const Services = React.lazy(() => import('./pages/Services'));
 const Experience = React.lazy(() => import('./pages/Experience'));
 const Projects = React.lazy(() => import('./pages/Projects'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-
-
 import './assets/js/global.js';
 
 function App() {
@@ -46,7 +44,7 @@ function App() {
         AOS.init({
             duration: 1000, // animation duration
             easing: "ease-in-out", // smoother easing
-            once: true, // trigger only once
+            once: false, // trigger only once
             offset: window.innerWidth < 768 ? 100 : 80,
         });
 
