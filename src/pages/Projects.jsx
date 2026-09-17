@@ -11,6 +11,7 @@ import chatterAppImage from '../assets/images/chatterAppImage.png';
 import datePickerImage from '../assets/images/datePickerImage.png';
 import jaraJewellersImage from '../assets/images/jaraJewellersImage.png';
 import appointerHubImage from '../assets/images/appointerHubImage.png';
+import jaraEStoreImage from '../assets/images/jaraEStoreImage.png';
 
 export default function Projects() {
     useEffect(() => {
@@ -26,30 +27,40 @@ export default function Projects() {
             tags: ['React', 'Node.js', 'React Native', 'Expo', 'Appwrite', 'PWA', 'Mobile App'],
             demo: 'https://chatterapp-web.vercel.app/',
             // code: 'https://github.com/rjsoni107/ChatSync_Git_Project',
-            featured: true,
+            // featured: true,
         },
         {
             id: 2,
-            title: 'JaRa Jewellers – Luxury E-Commerce Web App',
+            title: 'JaRa Jewellers – E-Commerce Web App',
             description: 'Luxury fine jewellery shopping portal featuring interactive product filtering, instant cart/wishlist state management, multi-step checkout, and silky-smooth micro-animations.',
             image: jaraJewellersImage,
             tags: ['React.js', 'Vite', 'Tailwind CSS', 'Context API', 'PWA', 'Mobile View'],
             demo: 'https://jara-jewellers.vercel.app/',
             // code: 'https://github.com/rjsoni107/Jewellery_Shopping_Git_Project',
-            featured: true,
+            // featured: true,
         },
         {
             id: 3,
             title: 'AppointerHub – Full-Stack Appointment Scheduling & CRM Platform',
-            description: 'AppointerHub is a full-stack, scalable CRM and appointment management platform designed to streamline client bookings, provider schedules, and lead pipelines. Built with React, Node.js, MongoDB.',
+            description: 'AppointerHub is a full-stack, scalable CRM and appointment management platform designed to streamline client bookings, provider schedules, and lead pipelines.',
             image: appointerHubImage,
             tags: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'MongoDB', 'Node.js', 'Responsive UI'],
             demo: 'https://appointerhub.vercel.app/',
             // code: 'https://github.com/rjsoni107/Jewellery_Shopping_Git_Project',
-            featured: true,
+            // featured: true,
         },
         {
             id: 4,
+            title: 'JaRa E-Store – Premium E-Commerce Platform with Native PWA Support',
+            description: 'JaRa E-Store is a high-performance fully responsive E-Commerce Web Application featuring dynamic dark mode, real-time cart state management and printable invoices.',
+            image: jaraEStoreImage,
+            tags: ['React.js', 'Redux Toolkit', 'Tailwind CSS', 'React Router v6', 'PWA & Service Workers', 'Lucide Icons'],
+            demo: 'https://jara-e-store.vercel.app/',
+            // code: 'https://github.com/rjsoni107/Jewellery_Shopping_Git_Project',
+            // featured: true,
+        },
+        {
+            id: 5,
             title: 'Rj Electronics – Modern Electronics Store',
             description: 'High-speed e-commerce frontend designed for gadget showcases. Built with dynamic product galleries, responsive cart flows, and GSAP smooth scroll animations.',
             image: rjElectronicsImage,
@@ -58,7 +69,7 @@ export default function Projects() {
             // code: 'https://github.com/rjsoni107/rj-electronics',
         },
         {
-            id: 5,
+            id: 6,
             title: 'Personal Portfolio Web Experience',
             description: 'Modern developer portfolio showcasing interactive UI engineering, clean architecture, responsive components, and fluid animations.',
             image: rjSoniPortfolioImage,
@@ -67,7 +78,7 @@ export default function Projects() {
             // code: 'https://github.com/rjsoni107/rjsoni',
         },
         {
-            id: 6,
+            id: 7,
             title: "Date Range Picker Library",
             description: "Customizable zero-dependency date range picker built in vanilla JavaScript. Supports custom date formats, predefined presets, and easy plug-and-play integration.",
             image: datePickerImage,
@@ -76,7 +87,7 @@ export default function Projects() {
             code: "https://github.com/rjsoni107/DateRangePicker"
         },
         {
-            id: 7,
+            id: 8,
             title: 'Dynamic Popup & Modal Handler',
             description: 'Lightweight animated notification and modal management library for web applications with customizable status themes, alerts, and smooth CSS transitions.',
             image: popupImage,
@@ -85,7 +96,7 @@ export default function Projects() {
             code: 'https://github.com/rjsoni107/popup-handler',
         },
         {
-            id: 8,
+            id: 9,
             title: 'Real-Time Analog & Digital Clock Engine',
             description: 'Interactive real-time clock application with smooth SVG sweep second hands, time zone detection, and responsive dark glass aesthetic.',
             image: clockImage,
@@ -146,7 +157,7 @@ export default function Projects() {
                                         {project.title}
                                     </h3>
 
-                                    <p className="text-slate-300/90 text-xs leading-relaxed mb-4 line-clamp-3">
+                                    <p className="text-slate-300/90 text-xs leading-relaxed mb-4">
                                         {project.description}
                                     </p>
                                 </div>

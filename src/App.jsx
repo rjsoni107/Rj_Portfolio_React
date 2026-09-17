@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 
 // Import components
 import Footer from './components/Footer';
+import PWAInstallBanner from './components/PWAInstallBanner';
 
 // Import sections
 const Home = React.lazy(() => import('./pages/Home'));
@@ -80,6 +81,9 @@ function App() {
                     </motion.button>
                 )}
             </AnimatePresence>
+
+            {/* PWA Install Banner */}
+            <PWAInstallBanner />
         </div>
     );
 }
