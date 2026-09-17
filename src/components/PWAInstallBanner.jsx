@@ -13,7 +13,7 @@ const PWAInstallBanner = () => {
 
     useEffect(() => {
         // Check if app is running in standalone mode (already installed & opened as PWA)
-        const isStandalone = 
+        const isStandalone =
             window.matchMedia('(display-mode: standalone)').matches ||
             window.navigator.standalone ||
             document.referrer.includes('android-app://');
@@ -77,7 +77,7 @@ const PWAInstallBanner = () => {
 
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
-        
+
         if (outcome === 'accepted') {
             setShowBanner(false);
         }
@@ -118,9 +118,9 @@ const PWAInstallBanner = () => {
                                     e.target.style.display = 'none';
                                 }}
                             />
-                            <div className="absolute inset-0 bg-emerald-500/10 flex items-center justify-center font-bold text-emerald-400 text-lg">
+                            {/* <div className="absolute inset-0 bg-emerald-500/10 flex items-center justify-center font-bold text-emerald-400 text-lg">
                                 RS
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Title & Description */}
@@ -129,9 +129,9 @@ const PWAInstallBanner = () => {
                                 <h4 className="text-sm font-semibold text-white tracking-wide truncate">
                                     Install Raj Soni App
                                 </h4>
-                                <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                                    PWA
-                                </span>
+                                {/* <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                                    PWA App
+                                </span> */}
                             </div>
                             <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">
                                 Fast access & offline experience on your home screen.
