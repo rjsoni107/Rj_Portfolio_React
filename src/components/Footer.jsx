@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
 
             {/* 🌊 Neon Wave Separator */}
-            <div className="absolute -top-1 left-0 w-full h-6 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-purple-500 opacity-70 blur-xl"></div>
+            {/* <div className="absolute -top-1 left-0 w-full h-6 bg-gradient-to-r from-cyan-500 via-fuchsia-500 to-purple-500 opacity-70 blur-xl"></div> */}
 
             {/* 🟦 Gradient Animated Border */}
             <div className="absolute inset-0 border border-transparent rounded-xl animate-borderGlow"></div>
@@ -87,7 +87,7 @@ const Footer = () => {
                     {/* About */}
                     <div>
                         {/* <h3 className="text-2xl font-semibold text-white mb-3">Raj Soni</h3> */}
-                        <img src={headerLogo} alt="logo" srcSet="" className="w-40 h-14" />
+                        <img src={headerLogo} alt="logo" srcSet="" className="w-45 h-20" />
                         <p className="mb-4 text-white/70">A passionate web developer dedicated to creating beautiful, responsive and polished web experiences.</p>
 
                         {/* Social Icons - Neon Orbit */}

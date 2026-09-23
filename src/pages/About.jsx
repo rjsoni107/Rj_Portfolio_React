@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaDownload, FaCheckCircle, FaBriefcase, FaGraduationCap } from 'react-icons/fa';
-import aboutImage from '../assets/images/about.png';
+import { FaPhoneAlt, FaDownload, FaCheckCircle, FaBriefcase } from 'react-icons/fa';
+import workplaceImage from '../assets/images/rj_workplace.png';
 import { resumeUrl } from '../assets/js/global';
 
 const About = () => {
@@ -41,37 +41,46 @@ const About = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    {/* Left: Framed Image Showcase */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    {/* Left: Framed Workstation Showcase */}
                     <div
                         data-aos="fade-right"
-                        className="lg:col-span-5 flex justify-center"
+                        className="lg:col-span-6 flex justify-center w-full"
                     >
-                        <div className="relative group w-full max-w-[380px]">
+                        <div className="relative group w-full max-w-xl">
                             {/* Ambient Aura */}
-                            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-emerald-500/30 to-cyan-500/30 blur-2xl -z-10 group-hover:scale-105 transition-transform duration-500" />
-                            
+                            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-emerald-500/25 via-teal-400/20 to-cyan-500/25 blur-2xl -z-10 group-hover:scale-105 transition-transform duration-500" />
+
                             {/* Border Ring */}
                             <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-b from-emerald-500/40 via-cyan-500/20 to-transparent p-[1px] blur-[0.5px]" />
 
-                            {/* Image Container */}
-                            <div className="relative rounded-[2.5rem] bg-gradient-to-b from-white/[0.08] to-white/[0.02] border border-white/10 backdrop-blur-xl p-4 shadow-2xl overflow-hidden">
-                                <img
-                                    src={aboutImage}
-                                    alt="Kuldeep Raj Soni - About"
-                                    className="rounded-3xl w-full h-[400px] object-cover object-top drop-shadow-lg transition-transform duration-500 group-hover:scale-[1.02]"
-                                />
-                                
-                                {/* Floating mini highlight badge */}
-                                <div className="absolute bottom-6 left-6 right-6 p-3.5 rounded-2xl bg-[#091124]/90 border border-emerald-500/30 backdrop-blur-md flex items-center gap-3 shadow-lg">
-                                    <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-base">
+                            {/* Widescreen Studio Frame */}
+                            <div className="relative rounded-[2.5rem] bg-gradient-to-b from-white/[0.09] to-white/[0.02] border border-white/10 backdrop-blur-xl p-3 sm:p-4 shadow-2xl overflow-hidden">
+
+                                {/* Workplace Image Container */}
+                                <div className="relative rounded-3xl overflow-hidden">
+                                    <img
+                                        src={workplaceImage}
+                                        alt="Kuldeep Raj Soni - Workstation Setup"
+                                        className="w-full h-[300px] sm:h-[360px] lg:h-[390px] object-cover object-center drop-shadow-xl transition-transform duration-700 group-hover:scale-[1.03]"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Glassmorphic Floating Badge - Placed below the image box */}
+                            <div className="mt-4 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-xl flex items-center justify-between shadow-xl hover:border-emerald-500/30 transition-all duration-300">
+                                <div className="flex items-center gap-3">
+                                    <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-lg shrink-0">
                                         <FaBriefcase />
                                     </div>
                                     <div>
-                                        <p className="text-[11px] text-slate-400 font-mono">Software Engineer (Frontend)</p>
-                                        <p className="text-xs font-bold text-white">Letzpay Solution Pvt Ltd</p>
+                                        <p className="text-xs text-slate-400 font-mono">Development Lab & Tech Stack</p>
+                                        <p className="text-sm font-bold text-white">JaRa Tech Solutions</p>
                                     </div>
                                 </div>
+                                <span className="text-xs font-mono text-emerald-400 font-semibold px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 shrink-0">
+                                    Frontend Lead
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -79,16 +88,16 @@ const About = () => {
                     {/* Right: Bio & Highlights Card */}
                     <div
                         data-aos="fade-left"
-                        className="lg:col-span-7 bg-white/[0.03] border border-white/10 backdrop-blur-xl rounded-[2.5rem] p-8 sm:p-10 shadow-2xl relative hover:border-emerald-500/30 transition-all duration-300"
+                        className="lg:col-span-6 bg-white/[0.03] border border-white/10 backdrop-blur-xl rounded-[2.5rem] p-8 sm:p-10 shadow-2xl relative hover:border-emerald-500/30 transition-all duration-300"
                     >
                         <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                             Passionate Front-End Engineer & <span className="text-emerald-400">Fintech Specialist</span>
                         </h3>
-                        
+
                         <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
                             With over <span className="text-white font-semibold">4 years of experience</span> in a high-volume Payment Gateway company, I specialize in crafting high-speed, scalable web applications and modular dashboards. Proficient in <span className="text-emerald-300 font-medium">ReactJS, modern JavaScript, Tailwind CSS, Redux, and REST API integration</span>.
                         </p>
-                        
+
                         <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
                             At Letzpay Solution, I spearhead front-end architecture for multi-tier CRM systems, payout solutions, and transaction routing modules. I take pride in writing clean, reusable, and well-documented code that delivers silky-smooth user experiences.
                         </p>
