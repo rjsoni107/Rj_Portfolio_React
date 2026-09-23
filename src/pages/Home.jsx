@@ -85,7 +85,7 @@ const Home = () => {
     return (
         <section
             id="home"
-            className="relative w-full min-h-screen flex flex-col justify-center bg-[#05070e] text-white overflow-hidden pt-24 pb-16 lg:py-0"
+            className="relative w-full min-h-screen flex flex-col justify-center bg-[#05070e] text-white overflow-hidden pt-24 pb-16 lg:pt-24 lg:pb-12"
         >
             {/* Header */}
             <Header />
@@ -115,83 +115,79 @@ const Home = () => {
 
             {/* Main Hero Container */}
             <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[calc(100vh-6rem)] py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start min-h-[calc(100vh-6.5rem)] py-2">
 
                     {/* LEFT COLUMN: Profile Showcase & Floating Tech Badges */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-                        className="lg:col-span-5 flex justify-center items-center relative order-1 lg:order-1"
+                        transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
+                        className="lg:col-span-5 flex justify-center items-start relative order-1 lg:order-1 pt-0"
                     >
-                        {/* Ambient Aura behind Image */}
-                        <div className="absolute w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-500/30 blur-3xl -z-10 animate-pulse" />
+                        {/* Ambient Glow Mesh behind Image */}
+                        <div className="absolute w-64 sm:w-80 h-64 sm:h-80 rounded-full bg-gradient-to-tr from-emerald-500/30 via-teal-400/20 to-cyan-500/30 blur-3xl -z-10 animate-pulse" />
 
-                        {/* Futuristic Frame / Card Container */}
-                        <div className="relative group w-full max-w-[340px] sm:max-w-[390px] flex justify-center">
+                        {/* Edge-to-Edge Sleek Poster Card Container */}
+                        <div className="relative group w-full max-w-[290px] sm:max-w-[330px] lg:max-w-[345px] flex justify-center">
 
-                            {/* Glowing Neon Ring Border */}
-                            <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-b from-emerald-500/40 via-cyan-500/20 to-transparent p-[1px] blur-[1px] group-hover:from-emerald-400 group-hover:via-teal-400 transition-all duration-500" />
+                            {/* Outer Neon Glow Aura Border */}
+                            <div className="absolute -inset-1 rounded-[2.2rem] bg-gradient-to-tr from-emerald-500/50 via-teal-400/30 to-cyan-500/40 opacity-70 blur-md group-hover:opacity-100 group-hover:blur-lg transition-all duration-500" />
 
-                            {/* Glass Base Platform */}
-                            <div className="relative w-full rounded-[2.5rem] bg-gradient-to-b from-white/[0.07] to-white/[0.01] border border-white/10 backdrop-blur-xl p-4 sm:p-6 shadow-2xl overflow-visible flex flex-col items-center">
-
-                                {/* Inner Profile Cutout */}
-                                <div className="relative w-full overflow-hidden rounded-3xl flex justify-center pt-2">
-                                    <img
-                                        src={heroImg}
-                                        alt="Kuldeep Raj Soni"
-                                        className="w-auto h-[380px] sm:h-[420px] object-contain object-bottom drop-shadow-[0_15px_35px_rgba(0,0,0,0.8)] transition-transform duration-500 group-hover:scale-[1.03]"
-                                        loading="eager"
-                                        fetchPriority="high"
-                                    />
-
-                                    {/* Bottom subtle gradient fade so the image baseline blends smoothly */}
-                                    <div className="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-[#090e1c] via-[#090e1c]/60 to-transparent pointer-events-none" />
-                                </div>
-
-                                {/* Floating Live Badge 1: Fintech Specialist (Top Right) */}
-                                <motion.div
-                                    animate={{ y: [0, -8, 0] }}
-                                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                    className="absolute -top-4 -right-3 sm:-right-5 px-3.5 py-2 rounded-2xl bg-[#091124]/90 border border-emerald-500/40 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center gap-2.5 z-20"
-                                >
-                                    <div className="w-8 h-8 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-sm">
-                                        <FaShieldAlt />
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Expertise</p>
-                                        <p className="text-xs font-bold text-white">Payment & Fintech</p>
-                                    </div>
-                                </motion.div>
-
-                                {/* Floating Live Badge 2: High Performance (Bottom Left) */}
-                                <motion.div
-                                    animate={{ y: [0, 8, 0] }}
-                                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                    className="absolute -bottom-4 -left-3 sm:-left-5 px-3.5 py-2 rounded-2xl bg-[#091124]/90 border border-cyan-500/40 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.5)] flex items-center gap-2.5 z-20"
-                                >
-                                    <div className="w-8 h-8 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 text-sm">
-                                        <FaBolt />
-                                    </div>
-                                    <div>
-                                        <p className="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Performance</p>
-                                        <p className="text-xs font-bold text-white">High-Speed UI</p>
-                                    </div>
-                                </motion.div>
-
-                                {/* Floating Live Badge 3: React & Modern Stack (Center Left/Right) */}
-                                <motion.div
-                                    animate={{ y: [0, -6, 0] }}
-                                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                                    className="hidden sm:flex absolute top-1/2 -left-6 px-3 py-1.5 rounded-xl bg-[#091124]/90 border border-teal-500/30 backdrop-blur-md shadow-lg items-center gap-2 z-20"
-                                >
-                                    <div className="w-7 h-7 rounded-lg bg-teal-500/20 flex items-center justify-center text-teal-300 text-xs">
-                                        <FaCode />
-                                    </div>
-                                    <span className="text-xs font-semibold text-slate-200">React Specialist</span>
-                                </motion.div>
+                            {/* Main Card Wrapper holding raj.webp */}
+                            <div className="relative w-full rounded-[2rem] overflow-hidden border border-white/20 bg-[#040c1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-all duration-500 group-hover:border-emerald-400/60 group-hover:shadow-[0_25px_60px_rgba(16,185,129,0.25)]">
+                                <img
+                                    src={heroImg}
+                                    alt="Kuldeep Raj Soni"
+                                    className="w-full h-auto object-cover rounded-[2rem] transition-transform duration-700 group-hover:scale-[1.03]"
+                                    loading="eager"
+                                    fetchPriority="high"
+                                />
                             </div>
+
+                            {/* Floating Badge 1: Expertise (Top Right) */}
+                            <motion.div
+                                animate={{ y: [0, -6, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute top-6 -right-3 sm:-right-6 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-emerald-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2.5 z-20"
+                            >
+                                <div className="w-7 h-7 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-xs">
+                                    <FaShieldAlt />
+                                </div>
+                                <div>
+                                    <p className="text-[9px] text-slate-400 font-mono uppercase tracking-wider">Expertise</p>
+                                    <p className="text-xs font-bold text-white">Payment & Fintech</p>
+                                </div>
+                            </motion.div>
+
+                            {/* Floating Badge 2: Performance (Bottom Right) */}
+                            <motion.div
+                                animate={{ y: [0, 6, 0] }}
+                                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                                className="absolute bottom-6 -right-3 sm:-right-6 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-cyan-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2.5 z-20"
+                            >
+                                <div className="w-7 h-7 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 text-xs">
+                                    <FaBolt />
+                                </div>
+                                <div>
+                                    <p className="text-[9px] text-slate-400 font-mono uppercase tracking-wider">Performance</p>
+                                    <p className="text-xs font-bold text-white">High-Speed UI</p>
+                                </div>
+                            </motion.div>
+
+                            {/* Floating Badge 3: React Specialist (Bottom Left) */}
+                            <motion.div
+                                animate={{ y: [0, -6, 0] }}
+                                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+                                className="absolute bottom-6 -left-3 sm:-left-6 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-teal-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2 z-20"
+                            >
+                                <div className="w-7 h-7 rounded-xl bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 text-xs">
+                                    <FaCode />
+                                </div>
+                                <div>
+                                    <p className="text-[9px] text-slate-400 font-mono uppercase tracking-wider">Core Stack</p>
+                                    <p className="text-xs font-bold text-white">React Specialist</p>
+                                </div>
+                            </motion.div>
                         </div>
                     </motion.div>
 
