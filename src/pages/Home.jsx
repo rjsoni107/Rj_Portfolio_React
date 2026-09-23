@@ -148,7 +148,7 @@ const Home = () => {
                             <motion.div
                                 animate={{ y: [0, -6, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute top-6 -right-3 sm:-right-6 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-emerald-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2.5 z-20"
+                                className="absolute top-4 -right-3 sm:-right-14 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-emerald-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2.5 z-20"
                             >
                                 <div className="w-7 h-7 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-xs">
                                     <FaShieldAlt />
@@ -163,7 +163,7 @@ const Home = () => {
                             <motion.div
                                 animate={{ y: [0, 6, 0] }}
                                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                                className="absolute bottom-6 -right-3 sm:-right-6 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-cyan-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2.5 z-20"
+                                className="absolute bottom-14 -right-3 sm:-right-6 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-cyan-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2.5 z-20"
                             >
                                 <div className="w-7 h-7 rounded-xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-400 text-xs">
                                     <FaBolt />
@@ -178,7 +178,7 @@ const Home = () => {
                             <motion.div
                                 animate={{ y: [0, -6, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                                className="absolute bottom-6 -left-3 sm:-left-6 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-teal-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2 z-20"
+                                className="absolute bottom-28 -left-3 sm:-left-14 px-3.5 py-2 rounded-2xl bg-[#091124]/95 border border-teal-500/50 backdrop-blur-md shadow-[0_10px_25px_rgba(0,0,0,0.6)] flex items-center gap-2 z-20"
                             >
                                 <div className="w-7 h-7 rounded-xl bg-teal-500/20 border border-teal-400/40 flex items-center justify-center text-teal-300 text-xs">
                                     <FaCode />
@@ -269,7 +269,7 @@ const Home = () => {
                         </motion.p>
 
                         {/* Quick Stats Strip */}
-                        <motion.div
+                        {/* <motion.div
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.7 }}
@@ -288,7 +288,7 @@ const Home = () => {
                                     </span>
                                 </div>
                             ))}
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* Action CTAs & Social Links */}
                         <motion.div
