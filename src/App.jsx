@@ -9,12 +9,12 @@ import Footer from './components/Footer';
 import PWAInstallBanner from './components/PWAInstallBanner';
 
 // Import sections
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Experience = React.lazy(() => import('./pages/Experience'));
-const Projects = React.lazy(() => import('./pages/Projects'));
-const Contact = React.lazy(() => import('./pages/Contact'));
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Experience from './pages/Experience';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import './assets/js/global.js';
 
 function App() {

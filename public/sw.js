@@ -1,4 +1,4 @@
-const CACHE_NAME = 'raj-soni-portfolio-v1';
+const CACHE_NAME = 'raj-soni-portfolio-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -32,19 +32,21 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
-  
+  if (!event.request.url.startsWith('http')) return;
+
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
         fetch(event.request)
           .then((networkResponse) => {
-            if (networkResponse && networkResponse.status === 200) {
+            if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
               caches.open(CACHE_NAME).then((cache) => cache.put(event.request, networkResponse.clone()));
             }
           })
           .catch(() => {});
         return cachedResponse;
       }
+
       return fetch(event.request).then((networkResponse) => {
         if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
           return networkResponse;
@@ -56,7 +58,10 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       });
     }).catch(() => {
-      return caches.match('/index.html');
+      // Only return index.html for page navigation requests (HTML), NOT for missing .js/.css assets
+      if (event.request.mode === 'navigate') {
+        return caches.match('/index.html');
+      }
     })
   );
 });
