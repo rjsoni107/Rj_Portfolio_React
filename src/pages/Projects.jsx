@@ -12,6 +12,8 @@ import datePickerImage from '../assets/images/datePickerImage.png';
 import jaraJewellersImage from '../assets/images/jaraJewellersImage.png';
 import appointerHubImage from '../assets/images/appointerHubImage.png';
 import jaraEStoreImage from '../assets/images/jaraEStoreImage.png';
+import skyCastImage from '../assets/images/skyCastImage.png';
+import jaraTechSolutionsImage from '../assets/images/jaraTechSolutionsImage.png';
 
 export default function Projects() {
     useEffect(() => {
@@ -61,6 +63,25 @@ export default function Projects() {
         },
         {
             id: 5,
+            title: 'JaRa Tech Solutions – Modern Digital Agency & Software Studio Website',
+            description: 'A high-performance corporate tech agency portfolio built with React, Vite, and Tailwind CSS. It features a modern dark-themed UI, dynamic project showcases, comprehensive service offerings, PWA support, and full SEO optimization.',
+            image: jaraTechSolutionsImage,
+            tags: ['React.js', 'React Router v7', 'Tailwind CSS', 'Vite', 'PWA & Service Workers', 'Lucide Icons'],
+            demo: 'https://jaratechsolutions.vercel.app/',
+            // code: 'https://github.com/rjsoni107/jara-tech-solutions',
+            // featured: true,
+        },
+        {
+            id: 6,
+            title: 'SkyCast — Next-Gen Real-Time Weather Dashboard & PWA',
+            description: 'SkyCast is a modern, high-performance weather forecast web application, it delivers real-time weather analytics, 24-hour hourly timelines, 7-day extended forecasts, Air Quality Index (AQI) metrics, interactive radar maps, and auto-location detection.',
+            image: skyCastImage,
+            tags: ['React.js (Vite)', 'Tailwind CSS v4', 'Leaflet', 'Open-Meteo API', 'PWA'],
+            demo: 'https://rj-weather-app.vercel.app/',
+            // code: 'https://github.com/rjsoni107/rj-electronics',
+        },
+        {
+            id: 7,
             title: 'Rj Electronics – Modern Electronics Store',
             description: 'High-speed e-commerce frontend designed for gadget showcases. Built with dynamic product galleries, responsive cart flows, and GSAP smooth scroll animations.',
             image: rjElectronicsImage,
@@ -69,7 +90,7 @@ export default function Projects() {
             // code: 'https://github.com/rjsoni107/rj-electronics',
         },
         {
-            id: 6,
+            id: 8,
             title: 'Personal Portfolio Web Experience',
             description: 'Modern developer portfolio showcasing interactive UI engineering, clean architecture, responsive components, and fluid animations.',
             image: rjSoniPortfolioImage,
@@ -78,7 +99,7 @@ export default function Projects() {
             // code: 'https://github.com/rjsoni107/rjsoni',
         },
         {
-            id: 7,
+            id: 9,
             title: "Date Range Picker Library",
             description: "Customizable zero-dependency date range picker built in vanilla JavaScript. Supports custom date formats, predefined presets, and easy plug-and-play integration.",
             image: datePickerImage,
@@ -87,7 +108,7 @@ export default function Projects() {
             code: "https://github.com/rjsoni107/DateRangePicker"
         },
         {
-            id: 8,
+            id: 10,
             title: 'Dynamic Popup & Modal Handler',
             description: 'Lightweight animated notification and modal management library for web applications with customizable status themes, alerts, and smooth CSS transitions.',
             image: popupImage,
@@ -96,7 +117,7 @@ export default function Projects() {
             code: 'https://github.com/rjsoni107/popup-handler',
         },
         {
-            id: 9,
+            id: 11,
             title: 'Real-Time Analog & Digital Clock Engine',
             description: 'Interactive real-time clock application with smooth SVG sweep second hands, time zone detection, and responsive dark glass aesthetic.',
             image: clockImage,

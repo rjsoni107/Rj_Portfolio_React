@@ -6,10 +6,10 @@ import { resumeUrl } from '../assets/js/global';
 
 const About = () => {
     const highlights = [
-        "4+ Years Fintech & Payment Gateway Experience",
-        "React.js, Modern ES6+, Redux & High-Speed UI",
+        "4+ Years in Fintech & Payment Systems",
         "Scalable CRM & Dashboard Architecture",
-        "Performance Optimization & Reusable Components"
+        "High-Performance React Applications",
+        "Reusable Components & API Integration"
     ];
 
     return (
@@ -79,8 +79,33 @@ const About = () => {
                                     </div>
                                 </div>
                                 <span className="text-xs font-mono text-emerald-400 font-semibold px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 shrink-0">
-                                    Frontend Lead
+                                    Founder • Frontend Engineer
                                 </span>
+                            </div>
+
+                            {/* Action Buttons (CTAs) */}
+                            <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+                                {/* Download CV */}
+                                <a
+                                    href={resumeUrl}
+                                    download
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] overflow-hidden"
+                                >
+                                    <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                                    <FaDownload className="text-sm transition-transform duration-300 group-hover:-translate-y-0.5" />
+                                    <span className="relative z-10">Download CV</span>
+                                </a>
+
+                                {/* Contact Me */}
+                                <a
+                                    href="#contact"
+                                    className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 hover:border-emerald-400/50 text-white font-medium text-sm sm:text-base backdrop-blur-md transition-all duration-300 hover:scale-[1.02]"
+                                >
+                                    <FaPhoneAlt className="text-sm text-emerald-400" />
+                                    <span>Get In Touch</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -90,51 +115,33 @@ const About = () => {
                         data-aos="fade-left"
                         className="lg:col-span-6 bg-white/[0.03] border border-white/10 backdrop-blur-xl rounded-[2.5rem] p-8 sm:p-10 shadow-2xl relative hover:border-emerald-500/30 transition-all duration-300"
                     >
-                        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-5">
                             Passionate Front-End Engineer & <span className="text-emerald-400">Fintech Specialist</span>
                         </h3>
 
-                        <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
-                            With over <span className="text-white font-semibold">4 years of experience</span> in a high-volume Payment Gateway company, I specialize in crafting high-speed, scalable web applications and modular dashboards. Proficient in <span className="text-emerald-300 font-medium">ReactJS, modern JavaScript, Tailwind CSS, Redux, and REST API integration</span>.
-                        </p>
-
-                        <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                            At Letzpay Solution, I spearhead front-end architecture for multi-tier CRM systems, payout solutions, and transaction routing modules. I take pride in writing clean, reusable, and well-documented code that delivers silky-smooth user experiences.
-                        </p>
+                        <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                            <p>
+                                I’m a <span className="text-white font-semibold">Front-End Engineer</span> with <span className="text-emerald-400 font-semibold">4+ years of experience</span> building scalable, high-performance web applications in the <span className="text-emerald-300 font-medium">fintech and payment gateway</span> domain.
+                            </p>
+                            <p>
+                                At <span className="text-white font-semibold">Letzpay Solution</span>, I work on multi-tier CRM systems, payout platforms, transaction routing modules, and dashboard-driven applications, focusing on performance, usability, and maintainable front-end architecture.
+                            </p>
+                            <p>
+                                I specialize in turning complex business workflows into clean, intuitive, and responsive user experiences. My approach combines reusable component architecture, performance optimization, API integration, and attention to detail to build products that are reliable at scale.
+                            </p>
+                            <p>
+                                Alongside my professional work, I also work through <span className="text-emerald-400 font-semibold">JaRa Tech Solutions</span>, where I build modern websites and digital experiences for businesses.
+                            </p>
+                        </div>
 
                         {/* Bullet Highlights */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {highlights.map((item, idx) => (
                                 <div key={idx} className="flex items-start gap-2.5">
                                     <FaCheckCircle className="text-emerald-400 text-base mt-0.5 shrink-0" />
                                     <span className="text-xs sm:text-sm text-slate-200 font-medium">{item}</span>
                                 </div>
                             ))}
-                        </div>
-
-                        {/* CTAs */}
-                        <div className="flex flex-wrap gap-4 pt-2">
-                            {/* Download CV */}
-                            <a
-                                href={resumeUrl}
-                                download
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.35)] hover:shadow-[0_0_30px_rgba(16,185,129,0.55)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] overflow-hidden"
-                            >
-                                <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                                <FaDownload className="text-sm transition-transform duration-300 group-hover:-translate-y-0.5" />
-                                <span className="relative z-10">Download CV</span>
-                            </a>
-
-                            {/* Contact Me */}
-                            <a
-                                href="#contact"
-                                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 hover:border-emerald-400/50 text-white font-medium text-sm sm:text-base backdrop-blur-md transition-all duration-300 hover:scale-[1.02]"
-                            >
-                                <FaPhoneAlt className="text-sm text-emerald-400" />
-                                <span>Get In Touch</span>
-                            </a>
                         </div>
                     </div>
                 </div>
