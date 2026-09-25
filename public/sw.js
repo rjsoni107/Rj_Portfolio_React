@@ -1,4 +1,4 @@
-const CACHE_NAME = 'raj-soni-portfolio-v2';
+const CACHE_NAME = 'raj-soni-portfolio-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -34,34 +34,58 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   if (!event.request.url.startsWith('http')) return;
 
+  const url = new URL(event.request.url);
+
+  // 1. Navigation requests (HTML / main page): Network First, Fallback to Cache
+  if (event.request.mode === 'navigate' || event.request.headers.get('accept')?.includes('text/html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
+          }
+          return networkResponse;
+        })
+        .catch(() => {
+          return caches.match('/index.html').then((cached) => cached || caches.match('/'));
+        })
+    );
+    return;
+  }
+
+  // 2. Static Assets & Other Requests: Cache First with Network Fallback
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
-        fetch(event.request)
-          .then((networkResponse) => {
-            if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-              caches.open(CACHE_NAME).then((cache) => cache.put(event.request, networkResponse.clone()));
-            }
-          })
-          .catch(() => {});
         return cachedResponse;
       }
 
       return fetch(event.request).then((networkResponse) => {
-        if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
+        if (!networkResponse || networkResponse.status !== 200) {
           return networkResponse;
         }
-        const responseToCache = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, responseToCache);
-        });
+
+        // Prevent caching HTML fallbacks (404 rewrites) when requesting JS or CSS module files
+        const contentType = networkResponse.headers.get('content-type') || '';
+        const isJsOrCssRequest = url.pathname.endsWith('.js') || url.pathname.endsWith('.css');
+        if (isJsOrCssRequest && contentType.includes('text/html')) {
+          return networkResponse;
+        }
+
+        if (networkResponse.type === 'basic' || networkResponse.type === 'cors') {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+        }
+
         return networkResponse;
       });
     }).catch(() => {
-      // Only return index.html for page navigation requests (HTML), NOT for missing .js/.css assets
-      if (event.request.mode === 'navigate') {
-        return caches.match('/index.html');
-      }
+      // Fallback for failed fetches (e.g. blocked scripts or offline asset fetches) to avoid TypeError: Failed to convert value to 'Response'
+      return new Response('Network error', { status: 408, headers: { 'Content-Type': 'text/plain' } });
     })
   );
 });
+
