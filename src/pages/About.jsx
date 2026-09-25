@@ -45,7 +45,7 @@ const About = () => {
                     {/* Left: Framed Workstation Showcase */}
                     <div
                         data-aos="fade-right"
-                        className="lg:col-span-6 flex justify-center w-full"
+                        className="lg:col-span-6 flex flex-col items-center w-full"
                     >
                         <div className="relative group w-full max-w-xl">
                             {/* Ambient Aura */}
@@ -82,31 +82,31 @@ const About = () => {
                                     Founder • Frontend Engineer
                                 </span>
                             </div>
+                        </div>
 
-                            {/* Action Buttons (CTAs) */}
-                            <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-                                {/* Download CV */}
-                                <a
-                                    href={resumeUrl}
-                                    download
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] overflow-hidden"
-                                >
-                                    <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                                    <FaDownload className="text-sm transition-transform duration-300 group-hover:-translate-y-0.5" />
-                                    <span className="relative z-10">Download CV</span>
-                                </a>
+                        {/* Action Buttons (CTAs) - Placed outside the green aura container */}
+                        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 w-full max-w-xl">
+                            {/* Download CV */}
+                            <a
+                                href={resumeUrl}
+                                download
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-lg transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] overflow-hidden"
+                            >
+                                <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                                <FaDownload className="text-sm transition-transform duration-300 group-hover:-translate-y-0.5" />
+                                <span className="relative z-10">Download CV</span>
+                            </a>
 
-                                {/* Contact Me */}
-                                <a
-                                    href="#contact"
-                                    className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 hover:border-emerald-400/50 text-white font-medium text-sm sm:text-base backdrop-blur-md transition-all duration-300 hover:scale-[1.02]"
-                                >
-                                    <FaPhoneAlt className="text-sm text-emerald-400" />
-                                    <span>Get In Touch</span>
-                                </a>
-                            </div>
+                            {/* Contact Me */}
+                            <a
+                                href="#contact"
+                                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/15 hover:border-emerald-400/50 text-white font-medium text-sm sm:text-base backdrop-blur-md transition-all duration-300 hover:scale-[1.02]"
+                            >
+                                <FaPhoneAlt className="text-sm text-emerald-400" />
+                                <span>Get In Touch</span>
+                            </a>
                         </div>
                     </div>
 

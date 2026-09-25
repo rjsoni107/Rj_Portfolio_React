@@ -133,7 +133,7 @@ export default function Contact() {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        placeholder="e.g. John Doe"
+                                        placeholder="Enter your name"
                                         className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-white/[0.06] outline-none transition-all"
                                         required
                                     />
@@ -145,7 +145,7 @@ export default function Contact() {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        placeholder="e.g. john@example.com"
+                                        placeholder="Enter your email"
                                         className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-white/[0.06] outline-none transition-all"
                                         required
                                     />
@@ -159,7 +159,7 @@ export default function Contact() {
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
-                                    placeholder="Project Inquiry / Job Opportunity"
+                                    placeholder="Enter subject / enquiry / something..."
                                     className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-white/[0.06] outline-none transition-all"
                                     required
                                 />

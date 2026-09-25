@@ -85,33 +85,63 @@ const Footer = () => {
                 {/* Footer Reveal Animation */}
                 <div data-aos="fade-up" className="grid md:grid-cols-3 gap-10 text-white/80">
                     {/* About */}
-                    <div>
-                        {/* <h3 className="text-2xl font-semibold text-white mb-3">Raj Soni</h3> */}
-                        <img src={headerLogo} alt="logo" srcSet="" className="w-45 h-20" />
-                        <p className="mb-4 text-white/70">A passionate web developer dedicated to creating beautiful, responsive and polished web experiences.</p>
+                    <div className="flex flex-col justify-between space-y-4 max-w-md">
+                        <div>
+                            {/* Logo */}
+                            <div className="inline-block mb-3">
+                                <img
+                                    src={headerLogo}
+                                    alt="Raj Soni Logo"
+                                    className="h-16 sm:h-20 object-contain drop-shadow-[0_0_15px_rgba(16,185,129,0.2)] transition-transform duration-300 hover:scale-[1.02]"
+                                />
+                            </div>
 
-                        {/* Social Icons - Neon Orbit */}
-                        <div className="flex gap-6 mt-4">
-                            {socialLinks.map((item, i) => (
-                                <a
-                                    key={i}
-                                    href={item.url}
-                                    className="relative group text-xl p-2 rounded-full bg-black backdrop-blur-xl border border-white/20 hover:border-cyan-400 transition-all"
-                                >
-                                    {item.icon}
-                                </a>
-                            ))}
+                            {/* Subheading */}
+                            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                                A passionate web developer dedicated to creating beautiful, responsive and polished web experiences.
+                            </p>
+                        </div>
+
+                        {/* Social Icons - Modern Glassmorphic Cards */}
+                        <div className="pt-2">
+                            <span className="text-xs uppercase tracking-widest font-mono text-emerald-400 font-semibold mb-3 block">
+                                Connect With Me
+                            </span>
+                            <div className="flex items-center gap-3 flex-wrap">
+                                {socialLinks.map((item, i) => (
+                                    <a
+                                        key={i}
+                                        href={item.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="relative group p-3 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-xl hover:bg-white/[0.1] hover:border-emerald-400/50 shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.25)] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center shrink-0"
+                                    >
+                                        <div className="transition-transform duration-300 group-hover:scale-110">
+                                            {item.icon}
+                                        </div>
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
                     {/* Quick Links */}
-                    <div>
-                        <h4 className="text-xl font-semibold text-white mb-3">Quick Links</h4>
-                        <ul className="space-y-2 text-white/70">
+                    <div className="flex flex-col justify-start">
+                        <span className="text-xs uppercase tracking-widest font-mono text-emerald-400 font-semibold mb-4 block">
+                            Quick Links
+                        </span>
+                        <ul className="space-y-3">
                             {navLinks.map((link, i) => (
                                 <li key={i}>
-                                    <a href={`#${link}`} onClick={(e) => { e.preventDefault(); handleNavClick(link); }} className="hover:text-cyan-400 text-white transition">
-                                        {link.charAt(0).toUpperCase() + link.slice(1)}
+                                    <a
+                                        href={`#${link}`}
+                                        onClick={(e) => { e.preventDefault(); handleNavClick(link); }}
+                                        className="group inline-flex items-center gap-2 text-slate-300 hover:text-emerald-400 text-sm sm:text-base font-medium transition-all duration-300"
+                                    >
+                                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/40 group-hover:bg-emerald-400 group-hover:scale-125 transition-all duration-300" />
+                                        <span className="group-hover:translate-x-1 transition-transform duration-300">
+                                            {link.charAt(0).toUpperCase() + link.slice(1)}
+                                        </span>
                                     </a>
                                 </li>
                             ))}
@@ -119,18 +149,28 @@ const Footer = () => {
                     </div>
 
                     {/* Newsletter */}
-                    <div>
-                        <h4 className="text-xl font-semibold text-white mb-3">Newsletter</h4>
-                        <p className="text-white/70 mb-4">Subscribe for latest updates.</p>
+                    <div className="flex flex-col justify-start">
+                        <span className="text-xs uppercase tracking-widest font-mono text-emerald-400 font-semibold mb-4 block">
+                            Newsletter
+                        </span>
+                        <p className="text-slate-300 text-sm mb-4 leading-relaxed">
+                            Subscribe for latest updates.
+                        </p>
 
-                        <form className="flex items-center gap-3">
+                        <form
+                            onSubmit={(e) => e.preventDefault()}
+                            className="relative flex items-center bg-white/[0.04] border border-white/10 backdrop-blur-xl rounded-2xl p-1.5 focus-within:border-emerald-400/50 focus-within:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all duration-300"
+                        >
                             <input
                                 type="email"
-                                className="w-full px-4 py-3 rounded-lg bg-black/30 border border-white text-white placeholder-white/40 focus:border-cyan-400 focus:shadow-[0_0_15px_rgba(0,255,255,0.6)] transition"
+                                className="w-full bg-transparent px-3.5 py-2 text-white placeholder-slate-400 text-sm focus:outline-none"
                                 placeholder="Your email address"
                                 required
                             />
-                            <button className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg shadow-lg hover:opacity-90 transition">
+                            <button
+                                type="submit"
+                                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-medium text-sm shadow-md hover:shadow-[0_0_15px_rgba(16,185,129,0.35)] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shrink-0"
+                            >
                                 Subscribe
                             </button>
                         </form>

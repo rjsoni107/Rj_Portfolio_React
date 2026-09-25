@@ -77,7 +77,7 @@ export default function Projects() {
             description: 'SkyCast is a modern, high-performance weather forecast web application, it delivers real-time weather analytics, 24-hour hourly timelines, 7-day extended forecasts, Air Quality Index (AQI) metrics, interactive radar maps, and auto-location detection.',
             image: skyCastImage,
             tags: ['React.js (Vite)', 'Tailwind CSS v4', 'Leaflet', 'Open-Meteo API', 'PWA'],
-            demo: 'https://rj-weather-app.vercel.app/',
+            demo: 'https://skycast-by-jara.vercel.app/',
             // code: 'https://github.com/rjsoni107/rj-electronics',
         },
         {
@@ -91,15 +91,6 @@ export default function Projects() {
         },
         {
             id: 8,
-            title: 'Personal Portfolio Web Experience',
-            description: 'Modern developer portfolio showcasing interactive UI engineering, clean architecture, responsive components, and fluid animations.',
-            image: rjSoniPortfolioImage,
-            tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-            demo: 'https://rjsoni.vercel.app/',
-            // code: 'https://github.com/rjsoni107/rjsoni',
-        },
-        {
-            id: 9,
             title: "Date Range Picker Library",
             description: "Customizable zero-dependency date range picker built in vanilla JavaScript. Supports custom date formats, predefined presets, and easy plug-and-play integration.",
             image: datePickerImage,
@@ -108,23 +99,23 @@ export default function Projects() {
             code: "https://github.com/rjsoni107/DateRangePicker"
         },
         {
-            id: 10,
+            id: 9,
             title: 'Dynamic Popup & Modal Handler',
             description: 'Lightweight animated notification and modal management library for web applications with customizable status themes, alerts, and smooth CSS transitions.',
             image: popupImage,
             tags: ['JavaScript', 'Animation', 'Library', 'CSS3'],
             demo: 'https://dynamicpopuphandler.vercel.app/',
             code: 'https://github.com/rjsoni107/popup-handler',
-        },
-        {
-            id: 11,
-            title: 'Real-Time Analog & Digital Clock Engine',
-            description: 'Interactive real-time clock application with smooth SVG sweep second hands, time zone detection, and responsive dark glass aesthetic.',
-            image: clockImage,
-            tags: ['JavaScript', 'CSS3 Animation', 'Math/Trig', 'HTML5'],
-            demo: 'https://clock-git-project.vercel.app/',
-            code: 'https://github.com/rjsoni107/Clock_Git_Project',
-        },
+        }
+        // {
+        //     id: 10,
+        //     title: 'Real-Time Analog & Digital Clock Engine',
+        //     description: 'Interactive real-time clock application with smooth SVG sweep second hands, time zone detection, and responsive dark glass aesthetic.',
+        //     image: clockImage,
+        //     tags: ['JavaScript', 'CSS3 Animation', 'Math/Trig', 'HTML5'],
+        //     demo: 'https://clock-git-project.vercel.app/',
+        //     code: 'https://github.com/rjsoni107/Clock_Git_Project',
+        // },
     ];
 
     return (
