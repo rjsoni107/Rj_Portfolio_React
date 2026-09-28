@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import rjElectronicsImage from '../assets/images/rjElectronicsBanner.png';
+import jaraElectronicsImage from '../assets/images/jaraElectronicsBanner.png';
 import clockImage from '../assets/images/clockImage.png';
 import popupImage from '../assets/images/popUpImage.png';
 import rjSoniPortfolioImage from '../assets/images/RjSoniPortfolioImage.png';
@@ -82,11 +82,11 @@ export default function Projects() {
         },
         {
             id: 7,
-            title: 'Rj Electronics – Modern Electronics Store',
+            title: 'JaRa Electronics – Modern Electronics Store',
             description: 'High-speed e-commerce frontend designed for gadget showcases. Built with dynamic product galleries, responsive cart flows, and GSAP smooth scroll animations.',
-            image: rjElectronicsImage,
-            tags: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Responsive UI'],
-            demo: 'https://rj-electronics.vercel.app/',
+            image: jaraElectronicsImage,
+            tags: ['React + Vite', 'PWA', 'Tailwind CSS v4', 'GSAP', 'Responsive UI', 'Scroll Animations'],
+            demo: 'https://jara-electronics.vercel.app/',
             // code: 'https://github.com/rjsoni107/rj-electronics',
         },
         {
