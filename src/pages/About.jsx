@@ -68,7 +68,7 @@ const About = () => {
                             </div>
 
                             {/* Glassmorphic Floating Badge - Placed below the image box */}
-                            <div className="mt-4 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-xl flex items-center justify-between shadow-xl hover:border-emerald-500/30 transition-all duration-300">
+                            <div className="mt-4 p-3.5 sm:p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl hover:border-emerald-500/30 transition-all duration-300">
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 text-lg shrink-0">
                                         <FaBriefcase />
