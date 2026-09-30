@@ -30,6 +30,20 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Automatic Single Page App (SPA) Route & Section Tracking for Google Analytics
+    useEffect(() => {
+        if (activeSection && typeof window !== 'undefined' && typeof window.gtag === 'function') {
+            const pagePath = `/#${activeSection}`;
+            const sectionTitle = activeSection.charAt(0).toUpperCase() + activeSection.slice(1);
+            
+            window.gtag('event', 'page_view', {
+                page_title: `Raj Soni | ${sectionTitle}`,
+                page_location: `${window.location.origin}${pagePath}`,
+                page_path: pagePath,
+            });
+        }
+    }, [activeSection]);
+
     // PWA install prompt listener
     useEffect(() => {
         const handleBeforeInstall = (e) => {
