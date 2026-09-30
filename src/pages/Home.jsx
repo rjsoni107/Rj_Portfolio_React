@@ -138,6 +138,9 @@ const Home = () => {
                                 <img
                                     src={heroImg}
                                     alt="Kuldeep Raj Soni"
+                                    width="345"
+                                    height="400"
+                                    decoding="async"
                                     className="w-full h-auto object-cover rounded-[2rem] transition-transform duration-700 group-hover:scale-[1.03]"
                                     loading="eager"
                                     fetchPriority="high"

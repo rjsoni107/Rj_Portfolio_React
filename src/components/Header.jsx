@@ -96,6 +96,7 @@ const Header = () => {
                 <a
                     href="#home"
                     onClick={(e) => { e.preventDefault(); handleNavClick('home'); }}
+                    aria-label="Raj Soni Portfolio Home"
                     className="flex items-center gap-2 z-50 relative group"
                 >
                     <img src={headerLogo} alt="Raj Soni Portfolio" className="h-10 sm:h-12 w-auto object-contain drop-shadow-md" />

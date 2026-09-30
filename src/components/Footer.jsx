@@ -16,14 +16,17 @@ const Footer = () => {
 
     const socialLinks = [
         {
+            name: "GitHub Profile",
             icon: <FaGithub color="#ffffff" size={25} />,
             url: "https://github.com/rjsoni107"
         },
         {
+            name: "LinkedIn Profile",
             icon: <FaLinkedin color="#0A66C2" size={25} />,
             url: "https://www.linkedin.com/in/kuldeep-soni-560b5b246"
         },
         {
+            name: "Instagram Profile",
             icon: (
                 <svg width="26" height="26" viewBox="0 0 24 24">
                     <defs>
@@ -45,10 +48,12 @@ const Footer = () => {
             url: "https://www.instagram.com/raj.soni.rj?igsh=NDUycXVrYTVscTdm"
         },
         {
+            name: "WhatsApp Chat",
             icon: <FaWhatsapp color="#25D366" size={25} />,
             url: "https://wa.me/919524000107"
         },
         {
+            name: "Facebook Profile",
             icon: <FaFacebook color="#559fff" size={25} />,
             url: "https://www.facebook.com/share/1BVBcybbH7/"
         }
@@ -114,6 +119,7 @@ const Footer = () => {
                                         href={item.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        aria-label={item.name}
                                         className="relative group p-3 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-xl hover:bg-white/[0.1] hover:border-emerald-400/50 shadow-lg hover:shadow-[0_0_20px_rgba(16,185,129,0.25)] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center shrink-0"
                                     >
                                         <div className="transition-transform duration-300 group-hover:scale-110">
