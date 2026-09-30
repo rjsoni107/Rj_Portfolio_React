@@ -136,7 +136,7 @@ const Home = () => {
                             {/* Main Card Wrapper holding raj.webp */}
                             <div className="relative w-full rounded-[2rem] overflow-hidden border border-white/20 bg-[#040c1a] shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl transition-all duration-500 group-hover:border-emerald-400/60 group-hover:shadow-[0_25px_60px_rgba(16,185,129,0.25)]">
                                 <img
-                                    src={heroImg}
+                                    src="/raj.webp"
                                     alt="Kuldeep Raj Soni"
                                     width="345"
                                     height="400"

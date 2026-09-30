@@ -45,13 +45,22 @@ function App() {
     };
 
     useEffect(() => {
-        AOS.init({
-            duration: 1000, // animation duration
-            easing: "ease-in-out", // smoother easing
-            once: false, // trigger only once
-            offset: window.innerWidth < 768 ? 100 : 80,
-        });
+        // Defer AOS initialization to idle time to eliminate forced reflow & main-thread blocking
+        const initAos = () => {
+            AOS.init({
+                duration: 800,
+                easing: "ease-in-out",
+                once: true,
+                disableMutationObserver: true,
+                offset: window.innerWidth < 768 ? 50 : 80,
+            });
+        };
 
+        if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+            window.requestIdleCallback(initAos);
+        } else {
+            setTimeout(initAos, 200);
+        }
     }, []);
 
     return (
