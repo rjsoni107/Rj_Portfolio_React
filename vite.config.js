@@ -7,7 +7,20 @@ export default defineConfig({
     base: '/',
 
     build: {
-        outDir: 'dist'
+        outDir: 'dist',
+        cssCodeSplit: true,
+        rollupOptions: {
+            output: {
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        if (id.includes('framer-motion')) return 'vendor-framer';
+                        if (id.includes('react-icons') || id.includes('lucide-react')) return 'vendor-icons';
+                        if (id.includes('swiper') || id.includes('aos')) return 'vendor-plugins';
+                        return 'vendor-core';
+                    }
+                },
+            },
+        },
     },
 
     server: {

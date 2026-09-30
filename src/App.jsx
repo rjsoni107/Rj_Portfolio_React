@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowUp } from 'react-icons/fa';
 import AOS from "aos";
@@ -8,19 +8,22 @@ import "aos/dist/aos.css";
 import Footer from './components/Footer';
 import PWAInstallBanner from './components/PWAInstallBanner';
 
-// Import sections
+// Above-the-fold section loaded immediately for fast initial rendering & LCP
 import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+
+// Below-the-fold sections lazy-loaded to reduce initial main-thread JavaScript execution time
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Experience = lazy(() => import('./pages/Experience'));
+const Projects = lazy(() => import('./pages/Projects'));
+const Contact = lazy(() => import('./pages/Contact'));
+
 import './assets/js/global.js';
 
 function App() {
     const [showScrollTop, setShowScrollTop] = useState(false);
 
-    // Handle scroll to show/hide scroll to top button
+    // Handle scroll to show/hide scroll to top button with passive listener
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 300) {
@@ -30,7 +33,7 @@ function App() {
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -55,11 +58,13 @@ function App() {
         <div className="min-h-screen bg-[#05070e] text-slate-100 font-sans selection:bg-emerald-500 selection:text-white antialiased">
             <main>
                 <Home />
-                <About />
-                <Services />
-                <Experience />
-                <Projects />
-                <Contact />
+                <Suspense fallback={<div className="min-h-[200px] flex items-center justify-center text-emerald-400 text-sm font-mono">Loading sections...</div>}>
+                    <About />
+                    <Services />
+                    <Experience />
+                    <Projects />
+                    <Contact />
+                </Suspense>
             </main>
 
             <Footer />
