@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en">
-  <head>
+    <!-- Auto-recovery handler for module loading errors & stale chunk cache -->
+    <script>
+      window.addEventListener('error', function(e) {
+        var msg = e.message || (e.target && e.target.src) || '';
+        if (typeof msg === 'string' && (msg.indexOf('Failed to load module script') !== -1 || msg.indexOf('Loading chunk') !== -1 || msg.indexOf('MIME type') !== -1)) {
+          var hasReloaded = sessionStorage.getItem('app_auto_reloaded');
+          if (!hasReloaded) {
+            sessionStorage.setItem('app_auto_reloaded', 'true');
+            window.location.reload(true);
+          }
+        }
+      }, true);
+    </script>
+
     <!-- Preload LCP Hero Image for Instant Discovery & Performance -->
     <link rel="preload" as="image" href="/raj.webp" type="image/webp" fetchpriority="high" />
 

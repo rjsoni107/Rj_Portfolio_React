@@ -66,11 +66,11 @@ self.addEventListener('fetch', (event) => {
           return networkResponse;
         }
 
-        // Prevent caching HTML fallbacks (404 rewrites) when requesting JS or CSS module files
+        // Prevent returning HTML fallbacks when requesting JS or CSS module files
         const contentType = networkResponse.headers.get('content-type') || '';
         const isJsOrCssRequest = url.pathname.endsWith('.js') || url.pathname.endsWith('.css');
         if (isJsOrCssRequest && contentType.includes('text/html')) {
-          return networkResponse;
+          return new Response('/* Stale script chunk */', { status: 404, headers: { 'Content-Type': 'text/javascript' } });
         }
 
         if (networkResponse.type === 'basic' || networkResponse.type === 'cors') {

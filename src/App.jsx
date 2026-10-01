@@ -11,12 +11,27 @@ import PWAInstallBanner from './components/PWAInstallBanner';
 // Above-the-fold section loaded immediately for fast initial rendering & LCP
 import Home from './pages/Home';
 
-// Below-the-fold sections lazy-loaded to reduce initial main-thread JavaScript execution time
-const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Experience = lazy(() => import('./pages/Experience'));
-const Projects = lazy(() => import('./pages/Projects'));
-const Contact = lazy(() => import('./pages/Contact'));
+// Helper for lazy loading with auto-retry on dynamic import chunk failure
+const lazyWithRetry = (componentImport) =>
+    lazy(async () => {
+        const pageAlreadyReloaded = sessionStorage.getItem('chunk_retry');
+        try {
+            return await componentImport();
+        } catch (error) {
+            if (!pageAlreadyReloaded) {
+                sessionStorage.setItem('chunk_retry', 'true');
+                window.location.reload();
+                return new Promise(() => {});
+            }
+            throw error;
+        }
+    });
+
+const About = lazyWithRetry(() => import('./pages/About'));
+const Services = lazyWithRetry(() => import('./pages/Services'));
+const Experience = lazyWithRetry(() => import('./pages/Experience'));
+const Projects = lazyWithRetry(() => import('./pages/Projects'));
+const Contact = lazyWithRetry(() => import('./pages/Contact'));
 
 import './assets/js/global.js';
 
