@@ -4,6 +4,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPaperPlane, FaGithub, FaLinke
 import emailjs from "@emailjs/browser";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CopyEmailButton from "../components/CopyEmailButton";
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
@@ -84,7 +85,7 @@ export default function Contact() {
                         data-aos="fade-right"
                         className="lg:col-span-5 space-y-6"
                     >
-                        <div className="p-8 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-xl space-y-6">
+                        <div className="p-8 rounded-3xl bg-[#0c1322] border border-slate-800/90 backdrop-blur-xl shadow-2xl space-y-6">
                             <h3 className="text-2xl font-bold text-white">
                                 Let's build something <span className="text-emerald-400">extraordinary</span>.
                             </h3>
@@ -99,17 +100,23 @@ export default function Contact() {
                                         href={item.link}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="flex items-center gap-4 p-3.5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/5 hover:border-emerald-500/30 transition-all duration-300 group"
+                                        className="flex items-center gap-4 p-4 rounded-2xl bg-[#050814] hover:bg-[#080f22] border border-slate-800/90 hover:border-emerald-500/40 transition-all duration-300 group relative shadow-md"
                                     >
-                                        <div className="w-11 h-11 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 transition-transform">
+                                        <div className="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-lg shrink-0 group-hover:scale-110 group-hover:border-emerald-500/40 transition-all shadow-sm">
                                             {item.icon}
                                         </div>
-                                        <div>
+                                        <div className="min-w-0 flex-1">
                                             <p className="text-xs font-mono text-slate-400">{item.title}</p>
-                                            <p className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">
+                                            <p className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors truncate">
                                                 {item.text}
                                             </p>
                                         </div>
+
+                                        {item.title === "Email" && (
+                                            <div className="shrink-0 pl-2">
+                                                <CopyEmailButton email={item.text} variant="icon-only" />
+                                            </div>
+                                        )}
                                     </a>
                                 ))}
                             </div>
@@ -123,57 +130,57 @@ export default function Contact() {
                     >
                         <form
                             onSubmit={handleSubmit}
-                            className="p-8 sm:p-10 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-xl shadow-xl relative space-y-5"
+                            className="p-8 sm:p-10 rounded-3xl bg-[#0c1322] border border-slate-800/90 backdrop-blur-xl shadow-2xl relative space-y-6"
                         >
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-xs font-mono text-slate-400 mb-2">Your Name</label>
+                                    <label className="block text-xs font-mono text-slate-300 mb-2 font-medium">Your Name</label>
                                     <input
                                         type="text"
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
                                         placeholder="Enter your name"
-                                        className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-white/[0.06] outline-none transition-all"
+                                        className="w-full px-4 py-3.5 rounded-xl bg-[#050814] border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-[#070e1f] focus:ring-2 focus:ring-emerald-400/20 outline-none transition-all shadow-inner"
                                         required
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-xs font-mono text-slate-400 mb-2">Your Email</label>
+                                    <label className="block text-xs font-mono text-slate-300 mb-2 font-medium">Your Email</label>
                                     <input
                                         type="email"
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
                                         placeholder="Enter your email"
-                                        className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-white/[0.06] outline-none transition-all"
+                                        className="w-full px-4 py-3.5 rounded-xl bg-[#050814] border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-[#070e1f] focus:ring-2 focus:ring-emerald-400/20 outline-none transition-all shadow-inner"
                                         required
                                     />
                                 </div>
                             </div>
 
                             <div>
-                                <label className="block text-xs font-mono text-slate-400 mb-2">Subject</label>
+                                <label className="block text-xs font-mono text-slate-300 mb-2 font-medium">Subject</label>
                                 <input
                                     type="text"
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
                                     placeholder="Enter subject / enquiry / something..."
-                                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-white/[0.06] outline-none transition-all"
+                                    className="w-full px-4 py-3.5 rounded-xl bg-[#050814] border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-[#070e1f] focus:ring-2 focus:ring-emerald-400/20 outline-none transition-all shadow-inner"
                                     required
                                 />
                             </div>
 
                             <div>
-                                <label className="block text-xs font-mono text-slate-400 mb-2">Message</label>
+                                <label className="block text-xs font-mono text-slate-300 mb-2 font-medium">Message</label>
                                 <textarea
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
                                     placeholder="Write your message here..."
                                     rows={5}
-                                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-white/[0.06] outline-none transition-all resize-none"
+                                    className="w-full px-4 py-3.5 rounded-xl bg-[#050814] border border-slate-700/80 text-white placeholder-slate-500 text-sm focus:border-emerald-400 focus:bg-[#070e1f] focus:ring-2 focus:ring-emerald-400/20 outline-none transition-all resize-none shadow-inner"
                                     required
                                 />
                             </div>
@@ -182,7 +189,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="group relative w-full inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:shadow-[0_0_35px_rgba(16,185,129,0.6)] transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] overflow-hidden cursor-pointer disabled:opacity-60"
+                                className="group relative w-full inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold text-sm sm:text-base shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:shadow-[0_0_35px_rgba(16,185,129,0.6)] transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] overflow-hidden cursor-pointer disabled:opacity-60 mt-2"
                             >
                                 <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                                 {isSent ? (

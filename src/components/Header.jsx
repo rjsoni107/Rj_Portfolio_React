@@ -120,7 +120,7 @@ const Header = () => {
                     ))}
                 </nav>
 
-                {/* Desktop CTA & PWA Install */}
+                {/* Desktop CTA */}
                 <div className="hidden lg:flex items-center gap-3">
                     {deferredPrompt && (
                         <button

@@ -33,10 +33,33 @@ const Experience = lazyWithRetry(() => import('./pages/Experience'));
 const Projects = lazyWithRetry(() => import('./pages/Projects'));
 const Contact = lazyWithRetry(() => import('./pages/Contact'));
 
+import CursorGlow from './components/CursorGlow';
+
 import './assets/js/global.js';
 
 function App() {
     const [showScrollTop, setShowScrollTop] = useState(false);
+
+    // Reset scroll to top (Home section) on page load & refresh
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            if ('scrollRestoration' in window.history) {
+                window.history.scrollRestoration = 'manual';
+            }
+            window.scrollTo(0, 0);
+
+            // Remove hash from URL if present to prevent browser auto-scrolling to #about
+            if (window.location.hash) {
+                window.history.replaceState(null, null, window.location.pathname + window.location.search);
+            }
+
+            const timer = setTimeout(() => {
+                window.scrollTo(0, 0);
+            }, 100);
+
+            return () => clearTimeout(timer);
+        }
+    }, []);
 
     // Handle scroll to show/hide scroll to top button with passive listener
     useEffect(() => {
@@ -79,8 +102,11 @@ function App() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#05070e] text-slate-100 font-sans selection:bg-emerald-500 selection:text-white antialiased">
-            <main>
+        <div className="min-h-screen bg-[#05070e] text-slate-100 font-sans selection:bg-emerald-500 selection:text-white antialiased relative">
+            {/* Interactive Mouse Cursor Glow */}
+            <CursorGlow />
+
+            <main className="relative z-10">
                 <Home />
                 <Suspense fallback={<div className="min-h-[200px] flex items-center justify-center text-emerald-400 text-sm font-mono">Loading sections...</div>}>
                     <About />

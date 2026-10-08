@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import heroImg from "../assets/images/raj.webp";
 import { resumeUrl } from "../assets/js/global";
 import Header from "../components/Header";
+import CopyEmailButton from "../components/CopyEmailButton";
 
 const Home = () => {
     const sequence = [
@@ -298,7 +299,7 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.8 }}
-                            className="flex flex-col sm:flex-row items-center gap-4 pt-2 w-full sm:w-auto"
+                            className="flex flex-col sm:flex-row flex-wrap items-center gap-4 pt-2 w-full sm:w-auto"
                         >
                             {/* Primary Button: Download CV */}
                             <a
@@ -322,6 +323,11 @@ const Home = () => {
                                 <span>Explore Projects</span>
                                 <FaArrowRight className="text-xs text-emerald-400 transition-transform duration-300 group-hover:translate-x-1" />
                             </a>
+
+                            {/* Copy Email Button */}
+                            <div className="w-full sm:w-auto">
+                                <CopyEmailButton email="rjsoni107@gmail.com" variant="full" />
+                            </div>
 
                             {/* Quick Socials */}
                             <div className="flex items-center gap-2.5 pt-2 sm:pt-0 sm:pl-3">
